@@ -16,9 +16,15 @@
 				object-fit: cover;
 			}
 				/* Hide mobile menu icon */
-			.navPanelToggle {
-			display: none !important;
-					}
+			/* Force hide the mobile menu icon */
+			body .navPanelToggle {
+			    display: none !important;
+			    visibility: hidden;
+			    opacity: 0;
+			    width: 0;
+			    height: 0;
+			    pointer-events: none;
+			}
 		</style>
 
 		<!-- Wrapper -->
