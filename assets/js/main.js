@@ -12,7 +12,7 @@
 		$header = $('#header'),
 		$nav = $('#nav'),
 		$main = $('#main'),
-		$navPanelToggle, $navPanel, $navPanelInner;
+		/*$navPanelToggle, $navPanel, $navPanelInner;*/
 
 	// Breakpoints.
 		breakpoints({
@@ -126,6 +126,7 @@
 	// Nav Panel.
 
 		// Toggle.
+	/*
 			$navPanelToggle = $(
 				'<a href="#navPanel" id="navPanelToggle">Menu</a>'
 			)
@@ -140,10 +141,10 @@
 					leave: function() {
 						$navPanelToggle.addClass('alt');
 					}
-				});
+				});*/
 
 		// Panel.
-			$navPanel = $(
+			/*$navPanel = $(
 				'<div id="navPanel">' +
 					'<nav>' +
 					'</nav>' +
@@ -194,7 +195,7 @@
 				if (browser.os == 'wp'
 				&&	browser.osVersion < 10)
 					$navPanel
-						.css('transition', 'none');
+						.css('transition', 'none');*/
 
 	// Intro.
 		var $intro = $('#intro');
