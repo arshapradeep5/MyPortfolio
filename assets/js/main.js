@@ -11,7 +11,8 @@
 		$wrapper = $('#wrapper'),
 		$header = $('#header'),
 		$nav = $('#nav'),
-		$main = $('#main');
+		$main = $('#main'),
+		$navPanelToggle, $navPanel, $navPanelInner;
 
 	// Breakpoints.
 	breakpoints({
@@ -37,56 +38,54 @@
 			return $this;
 
 		if (this.length > 1) {
+
 			for (var i = 0; i < this.length; i++)
 				$(this[i])._parallax(intensity);
+
 			return $this;
+
 		}
 
 		if (!intensity)
 			intensity = 0.25;
 
 		$this.each(function() {
+
 			var $t = $(this),
 				$bg = $('<div class="bg"></div>').appendTo($t),
 				on, off;
 
 			on = function() {
+
 				$bg
 					.removeClass('fixed')
 					.css('transform', 'matrix(1,0,0,1,0,0)');
-				$window.on('scroll._parallax', function() {
-					var pos = parseInt($window.scrollTop()) - parseInt($t.position().top);
-					$bg.css('transform', 'matrix(1,0,0,1,0,' + (pos * intensity) + ')');
-				});
+
+				$window
+					.on('scroll._parallax', function() {
+
+						var pos = parseInt($window.scrollTop()) - parseInt($t.position().top);
+
+						$bg.css('transform', 'matrix(1,0,0,1,0,' + (pos * intensity) + ')');
+
+					});
+
 			};
 
 			off = function() {
+
 				$bg
 					.addClass('fixed')
 					.css('transform', 'none');
-				$window.off('scroll._parallax');
+
+				$window
+					.off('scroll._parallax');
+
 			};
 
-			// Disable parallax on IE, Edge, Retina, and mobile
-			if (browser.name == 'ie' || browser.name == 'edge' || window.devicePixelRatio > 1 || browser.mobile)
+			// Disable parallax on ..
+			if (browser.name == 'ie'			// IE
+			||	browser.name == 'edge'			// Edge
+			||	window.devicePixelRatio > 1		// Retina/HiDPI (= poor performance)
+			||	browser.mobile)					// Mobile devices
 				off();
-			else {
-				breakpoints.on('>large', on);
-				breakpoints.on('<=large', off);
-			}
-		});
-
-		$window
-			.off('load._parallax resize._parallax')
-			.on('load._parallax resize._parallax', function() {
-				$window.trigger('scroll');
-			});
-
-		return $(this);
-	};
-
-	// Play initial animations on page load.
-	$window.on('load', function() {
-		window.setTimeout(function() {
-			$body.removeClass('is-preload');
-		},
