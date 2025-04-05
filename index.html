@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="Portfolio website of Arsha Pradeep, Senior BI Developer with expertise in Power BI, SQL, and data visualization." />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	</head>
 	<body class="is-preload">
 		<style>
@@ -15,22 +16,42 @@
 				border-radius: 50%;
 				object-fit: cover;
 			}
-			.chart-section {
-			      max-width: 700px;
-			      margin: 50px auto;
-			      text-align: center;
-			    }
+			.skills {
+			    width: 70%;
+			    margin: auto;
+			    text-align: center;
+			}
 			
-			    #radarChart, #tagCloudCanvas {
-			      max-width: 100%;
-			      margin-top: 20px;
-			    }
+			h3 {
+			    text-align: left;
+			    margin-top: 20px;
+			    color: #00b4d8;
+			}
 			
-			    canvas {
-			      display: block;
-			      margin: 0 auto;
-			    }
-									
+			.skill {
+			    text-align: left;
+			    margin: 10px 0;
+			}
+			
+			.skill p {
+			    font-weight: bold;
+			}
+			
+			.progress-bar {
+			    width: 100%;
+			    height: 10px;
+			    background: #ddd;
+			    border-radius: 5px;
+			    overflow: hidden;
+			}
+			
+			.progress {
+			    height: 100%;
+			    background: #00b4d8;
+			    transition: width 1s ease-in-out;
+			}
+			
+						
 			</style>
 
 		<!-- Wrapper -->
@@ -138,24 +159,123 @@
 
 				</section>
 							<!-- Skills -->
-			<section id="skills">
-				<header class="major">
-					<h2>Skills & Expertise</h2>
-				</header>
+							<!-- Skills Section -->
+				<section id="skills" class="wrapper style3 fade-up">
+				    <div class="inner">
+				        <h2>Skills</h2>
+				        <p>A breakdown of my Technical and Soft Skills represented through interactive radar charts.</p>
 				
-				   
+				        <!-- Technical Skills Radar Chart -->
+				        <h3 style="text-align:center;">Technical Skills</h3>
+				        <canvas id="technicalSkillsChart"></canvas>
 				
-				   				   
-				  <section class="chart-section">
-				    <h2>Skill Radar Chart</h2>
-				    <canvas id="radarChart"></canvas>
-				  </section>
+				        <!-- Soft Skills Radar Chart -->
+				        <h3 style="text-align:center; margin-top: 60px;">Soft Skills</h3>
+				        <canvas id="softSkillsChart"></canvas>
 				
-				  <!-- Tag Cloud -->
-				  <section class="chart-section">
-				    <h2>Skill Tag Cloud</h2>
-				    <canvas id="tagCloudCanvas" width="600" height="300"></canvas>
-				  </section>
+				        <!-- Chart.js Library -->
+				        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+				
+				        <script>
+				            // Technical Skills Chart
+				            const ctxTechnical = document.getElementById('technicalSkillsChart').getContext('2d');
+				            new Chart(ctxTechnical, {
+				                type: 'radar',
+				                data: {
+				                    labels: [
+				                        'Power BI', 'SQL', 'DAX', 'Tableau', 'Spotfire',
+				                        'ADF', 'Power Query', 'Python', 'R', 'SQL Server', 'Azure SQL'
+				                    ],
+				                    datasets: [{
+				                        label: 'Proficiency (%)',
+				                        data: [95, 90, 85, 85, 80, 75, 80, 85, 75, 88, 80],
+				                        backgroundColor: 'rgba(0, 180, 216, 0.2)',
+				                        borderColor: 'rgba(0, 180, 216, 1)',
+				                        pointBackgroundColor: 'rgba(0, 180, 216, 1)'
+				                    }]
+				                },
+				                options: {
+				                    responsive: true,
+				                    maintainAspectRatio: false,
+				                    scales: {
+				                        r: {
+				                            suggestedMin: 50,
+				                            suggestedMax: 100,
+				                            pointLabels: {
+				                                color: '#ffffff',
+				                                font: { size: 12 }
+				                            },
+				                            ticks: { color: '#ffffff' },
+				                            grid: { color: 'rgba(255,255,255,0.2)' }
+				                        }
+				                    },
+				                    plugins: {
+				                        legend: {
+				                            labels: {
+				                                color: '#ffffff',
+				                                font: { size: 14 }
+				                            }
+				                        }
+				                    }
+				                }
+				            });
+				
+				            // Soft Skills Chart
+				            const ctxSoft = document.getElementById('softSkillsChart').getContext('2d');
+				            new Chart(ctxSoft, {
+				                type: 'radar',
+				                data: {
+				                    labels: ['Requirement Gathering', 'Problem Solving', 'Storytelling', 'Stakeholder Communication', 'Team Collaboration'],
+				                    datasets: [{
+				                        label: 'Proficiency (%)',
+				                        data: [90, 90, 85, 88, 87],
+				                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+				                        borderColor: 'rgba(255, 99, 132, 1)',
+				                        pointBackgroundColor: 'rgba(255, 99, 132, 1)'
+				                    }]
+				                },
+				                options: {
+				                    responsive: true,
+				                    maintainAspectRatio: false,
+				                    scales: {
+				                        r: {
+				                            suggestedMin: 50,
+				                            suggestedMax: 100,
+				                            pointLabels: {
+				                                color: '#ffffff',
+				                                font: { size: 12 }
+				                            },
+				                            ticks: { color: '#ffffff' },
+				                            grid: { color: 'rgba(255,255,255,0.2)' }
+				                        }
+				                    },
+				                    plugins: {
+				                        legend: {
+				                            labels: {
+				                                color: '#ffffff',
+				                                font: { size: 14 }
+				                            }
+				                        }
+				                    }
+				                }
+				            });
+				        </script>
+				
+				        <style>
+				            #technicalSkillsChart,
+				            #softSkillsChart {
+				                max-width: 700px;
+				                height: 500px;
+				                margin: 30px auto;
+				                padding: 20px;
+				                background: rgba(255, 255, 255, 0.05);
+				                border-radius: 10px;
+				            }
+				        </style>
+				    </div>
+				</section>
+
+
 				</div>
 			</section>
 
@@ -195,7 +315,6 @@
 		</div>
 
 		<!-- Scripts -->
-<!-- Scripts -->
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/jquery.scrollex.min.js"></script>
 		<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -203,64 +322,6 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
-		
-		<!-- Chart.js CDN -->
-		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-		
-		<!-- Radar Chart Script -->
-		<script>
-		  const radarCtx = document.getElementById('radarChart').getContext('2d');
-		  new Chart(radarCtx, {
-		    type: 'radar',
-		    data: {
-		      labels: ['Power BI', 'SQL', 'DAX', 'Python', 'ADF', 'Excel'],
-		      datasets: [{
-		        label: 'Proficiency Level',
-		        data: [95, 90, 85, 85, 75, 90],
-		        fill: true,
-		        backgroundColor: 'rgba(0, 180, 216, 0.2)',
-		        borderColor: '#00b4d8',
-		        pointBackgroundColor: '#0077b6'
-		      }]
-		    },
-		    options: {
-		      responsive: true,
-		      scales: {
-		        r: {
-		          angleLines: { display: false },
-		          suggestedMin: 0,
-		          suggestedMax: 100
-		        }
-		      }
-		    }
-		  });
-		</script>
-		
-		<!-- Tag Cloud Script -->
-		<script>
-		  const canvas = document.getElementById('tagCloudCanvas');
-		  const ctx = canvas.getContext('2d');
-		  const tags = [
-		    'Power BI', 'SQL', 'DAX', 'Python', 'Excel', 'ADF',
-		    'Tableau', 'Spotfire', 'Azure', 'HTML', 'CSS', 'R'
-		  ];
-		
-		  function drawTagCloud() {
-		    ctx.clearRect(0, 0, canvas.width, canvas.height);
-		    tags.forEach(tag => {
-		      const fontSize = 14 + Math.random() * 16;
-		      ctx.font = `${fontSize}px Arial`;
-		      ctx.fillStyle = `hsl(${Math.random() * 360}, 70%, 50%)`;
-		      const x = Math.random() * (canvas.width - 100);
-		      const y = Math.random() * (canvas.height - 20) + 20;
-		      ctx.fillText(tag, x, y);
-		    });
-		  }
-		
-		  drawTagCloud();
-		</script>
-
-
 
 	</body>
 </html>
