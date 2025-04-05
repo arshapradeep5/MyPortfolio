@@ -15,42 +15,22 @@
 				border-radius: 50%;
 				object-fit: cover;
 			}
-			.skills {
-			    width: 70%;
-			    margin: auto;
-			    text-align: center;
-			}
+			.chart-section {
+			      max-width: 700px;
+			      margin: 50px auto;
+			      text-align: center;
+			    }
 			
-			h3 {
-			    text-align: left;
-			    margin-top: 20px;
-			    color: #00b4d8;
-			}
+			    #radarChart, #tagCloudCanvas {
+			      max-width: 100%;
+			      margin-top: 20px;
+			    }
 			
-			.skill {
-			    text-align: left;
-			    margin: 10px 0;
-			}
-			
-			.skill p {
-			    font-weight: bold;
-			}
-			
-			.progress-bar {
-			    width: 100%;
-			    height: 10px;
-			    background: #ddd;
-			    border-radius: 5px;
-			    overflow: hidden;
-			}
-			
-			.progress {
-			    height: 100%;
-			    background: #00b4d8;
-			    transition: width 1s ease-in-out;
-			}
-			
-						
+			    canvas {
+			      display: block;
+			      margin: 0 auto;
+			    }
+									
 			</style>
 
 		<!-- Wrapper -->
@@ -162,116 +142,20 @@
 				<header class="major">
 					<h2>Skills & Expertise</h2>
 				</header>
-				<section class="skills">
+				
 				   
 				
-				    <h3>Data Visualization & Reporting</h3>
-				    <div class="skill">
-				        <p>Power BI</p>
-				        <div class="progress-bar"><div class="progress" style="width: 95%;"></div></div>
-				    </div>
-				    <div class="skill">
-				        <p>Tableau</p>
-				        <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
-				    </div>
-				    <div class="skill">
-				        <p>TIBCO Spotfire</p>
-				        <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
-				    </div>
-				    <div class="skill">
-				        <p>Excel</p>
-				        <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
-				    </div>
+				   				   
+				  <section class="chart-section">
+				    <h2>Skill Radar Chart</h2>
+				    <canvas id="radarChart"></canvas>
+				  </section>
 				
-				    <h3>Data Analytics & Modeling</h3>
-				    <div class="skill">
-				        <p>SQL</p>
-				        <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
-				    </div>
-				    <div class="skill">
-				        <p>DAX</p>
-				        <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
-				    </div>
-				    <div class="skill">
-				        <p>Data Transformation & Modeling</p>
-				        <div class="progress-bar"><div class="progress" style="width: 88%;"></div></div>
-				    </div>
-				
-				    <h3>ETL & Data Integration</h3>
-				    <div class="skill">
-				        <p>Azure Data Factory (ADF)</p>
-				        <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
-				    </div>
-				    <div class="skill">
-				        <p>Power Query</p>
-				        <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
-				    </div>
-				    <div class="skill">
-				        <p>Pipelines</p>
-				        <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
-				    </div>
-				
-				    <h3>Programming & Scripting</h3>
-				    <div class="skill">
-				        <p>Python</p>
-				        <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
-				    </div>
-				    <div class="skill">
-				        <p>R</p>
-				        <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
-				    </div>
-				    <div class="skill">
-				        <p>HTML & CSS</p>
-				        <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
-				    </div>
-				    <div class="skill">
-				        <p>IronPython</p>
-				        <div class="progress-bar"><div class="progress" style="width: 65%;"></div></div>
-				    </div>
-				
-				    <h3>Database Management</h3>
-				    <div class="skill">
-				        <p>SQL Server</p>
-				        <div class="progress-bar"><div class="progress" style="width: 88%;"></div></div>
-				    </div>
-				    <div class="skill">
-				        <p>Azure SQL</p>
-				        <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
-				    </div>
-				    <div class="skill">
-				        <p>Azure Data Lake</p>
-				        <div class="progress-bar"><div class="progress" style="width: 78%;"></div></div>
-				    </div>
-				
-				    <h3>Soft Skills</h3>
-					<div class="skill">
-					    <p>Requirement Gathering</p>
-					    <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
-					</div>
-					<div class="skill">
-					    <p>Business Analysis</p>
-					    <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
-					</div>
-					<div class="skill">
-					    <p>Storytelling with Data</p>
-					    <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
-					</div>
-					<div class="skill">
-					    <p>Problem Solving</p>
-					    <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
-					</div>
-					<div class="skill">
-					    <p>Stakeholder Communication</p>
-					    <div class="progress-bar"><div class="progress" style="width: 88%;"></div></div>
-					</div>
-					<div class="skill">
-					    <p>Team Collaboration</p>
-					    <div class="progress-bar"><div class="progress" style="width: 87%;"></div></div>
-					</div>
-
-				    </br>
-				    </div>
-
+				  <!-- Tag Cloud -->
+				  <section class="chart-section">
+				    <h2>Skill Tag Cloud</h2>
+				    <canvas id="tagCloudCanvas" width="600" height="300"></canvas>
+				  </section>
 				</div>
 			</section>
 
@@ -318,6 +202,58 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script>
+    		const radarCtx = document.getElementById('radarChart').getContext('2d');
+		    new Chart(radarCtx, {
+		      type: 'radar',
+		      data: {
+		        labels: ['Power BI', 'SQL', 'DAX', 'Python', 'ADF', 'Excel'],
+		        datasets: [{
+		          label: 'Proficiency Level',
+		          data: [95, 90, 85, 85, 75, 90],
+		          fill: true,
+		          backgroundColor: 'rgba(0, 180, 216, 0.2)',
+		          borderColor: '#00b4d8',
+		          pointBackgroundColor: '#0077b6'
+		        }]
+		      },
+		      options: {
+		        responsive: true,
+		        scales: {
+		          r: {
+		            angleLines: { display: false },
+		            suggestedMin: 0,
+		            suggestedMax: 100
+		          }
+		        }
+		      }
+		    });
+		  </script>
+		
+		  <!-- Tag Cloud Script -->
+		  <script>
+		    const canvas = document.getElementById('tagCloudCanvas');
+		    const ctx = canvas.getContext('2d');
+		    const tags = [
+		      'Power BI', 'SQL', 'DAX', 'Python', 'Excel', 'ADF',
+		      'Tableau', 'Spotfire', 'Azure', 'HTML', 'CSS', 'R'
+		    ];
+		
+		    function drawTagCloud() {
+		      ctx.clearRect(0, 0, canvas.width, canvas.height);
+		      tags.forEach(tag => {
+		        const fontSize = 14 + Math.random() * 16;
+		        ctx.font = `${fontSize}px Arial`;
+		        ctx.fillStyle = `hsl(${Math.random() * 360}, 70%, 50%)`;
+		        const x = Math.random() * (canvas.width - 100);
+		        const y = Math.random() * (canvas.height - 20) + 20;
+		        ctx.fillText(tag, x, y);
+		      });
+		    }
+		
+		    drawTagCloud();
+		  </script>
+
 
 	</body>
 </html>
