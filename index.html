@@ -6,7 +6,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="Portfolio website of Arsha Pradeep, Senior BI Developer with expertise in Power BI, SQL, and data visualization." />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	</head>
 	<body class="is-preload">
 		<style>
@@ -159,122 +158,119 @@
 
 				</section>
 							<!-- Skills -->
-							<!-- Skills Section -->
-				<section id="skills" class="wrapper style3 fade-up">
-				    <div class="inner">
-				        <h2>Skills</h2>
-				        <p>A breakdown of my Technical and Soft Skills represented through interactive radar charts.</p>
+			<section id="skills">
+				<header class="major">
+					<h2>Skills & Expertise</h2>
+				</header>
+				<section class="skills">
+				   
 				
-				        <!-- Technical Skills Radar Chart -->
-				        <h3 style="text-align:center;">Technical Skills</h3>
-				        <canvas id="technicalSkillsChart"></canvas>
-				
-				        <!-- Soft Skills Radar Chart -->
-				        <h3 style="text-align:center; margin-top: 60px;">Soft Skills</h3>
-				        <canvas id="softSkillsChart"></canvas>
-				
-				        <!-- Chart.js Library -->
-				        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-				
-				        <script>
-				            // Technical Skills Chart
-				            const ctxTechnical = document.getElementById('technicalSkillsChart').getContext('2d');
-				            new Chart(ctxTechnical, {
-				                type: 'radar',
-				                data: {
-				                    labels: [
-				                        'Power BI', 'SQL', 'DAX', 'Tableau', 'Spotfire',
-				                        'ADF', 'Power Query', 'Python', 'R', 'SQL Server', 'Azure SQL'
-				                    ],
-				                    datasets: [{
-				                        label: 'Proficiency (%)',
-				                        data: [95, 90, 85, 85, 80, 75, 80, 85, 75, 88, 80],
-				                        backgroundColor: 'rgba(0, 180, 216, 0.2)',
-				                        borderColor: 'rgba(0, 180, 216, 1)',
-				                        pointBackgroundColor: 'rgba(0, 180, 216, 1)'
-				                    }]
-				                },
-				                options: {
-				                    responsive: true,
-				                    maintainAspectRatio: false,
-				                    scales: {
-				                        r: {
-				                            suggestedMin: 50,
-				                            suggestedMax: 100,
-				                            pointLabels: {
-				                                color: '#ffffff',
-				                                font: { size: 12 }
-				                            },
-				                            ticks: { color: '#ffffff' },
-				                            grid: { color: 'rgba(255,255,255,0.2)' }
-				                        }
-				                    },
-				                    plugins: {
-				                        legend: {
-				                            labels: {
-				                                color: '#ffffff',
-				                                font: { size: 14 }
-				                            }
-				                        }
-				                    }
-				                }
-				            });
-				
-				            // Soft Skills Chart
-				            const ctxSoft = document.getElementById('softSkillsChart').getContext('2d');
-				            new Chart(ctxSoft, {
-				                type: 'radar',
-				                data: {
-				                    labels: ['Requirement Gathering', 'Problem Solving', 'Storytelling', 'Stakeholder Communication', 'Team Collaboration'],
-				                    datasets: [{
-				                        label: 'Proficiency (%)',
-				                        data: [90, 90, 85, 88, 87],
-				                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
-				                        borderColor: 'rgba(255, 99, 132, 1)',
-				                        pointBackgroundColor: 'rgba(255, 99, 132, 1)'
-				                    }]
-				                },
-				                options: {
-				                    responsive: true,
-				                    maintainAspectRatio: false,
-				                    scales: {
-				                        r: {
-				                            suggestedMin: 50,
-				                            suggestedMax: 100,
-				                            pointLabels: {
-				                                color: '#ffffff',
-				                                font: { size: 12 }
-				                            },
-				                            ticks: { color: '#ffffff' },
-				                            grid: { color: 'rgba(255,255,255,0.2)' }
-				                        }
-				                    },
-				                    plugins: {
-				                        legend: {
-				                            labels: {
-				                                color: '#ffffff',
-				                                font: { size: 14 }
-				                            }
-				                        }
-				                    }
-				                }
-				            });
-				        </script>
-				
-				        <style>
-				            #technicalSkillsChart,
-				            #softSkillsChart {
-				                max-width: 700px;
-				                height: 500px;
-				                margin: 30px auto;
-				                padding: 20px;
-				                background: rgba(255, 255, 255, 0.05);
-				                border-radius: 10px;
-				            }
-				        </style>
+				    <h3>Data Visualization & Reporting</h3>
+				    <div class="skill">
+				        <p>Power BI</p>
+				        <div class="progress-bar"><div class="progress" style="width: 95%;"></div></div>
 				    </div>
-				</section>
+				    <div class="skill">
+				        <p>Tableau</p>
+				        <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+				    </div>
+				    <div class="skill">
+				        <p>TIBCO Spotfire</p>
+				        <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+				    </div>
+				    <div class="skill">
+				        <p>Excel</p>
+				        <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+				    </div>
+				
+				    <h3>Data Analytics & Modeling</h3>
+				    <div class="skill">
+				        <p>SQL</p>
+				        <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+				    </div>
+				    <div class="skill">
+				        <p>DAX</p>
+				        <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+				    </div>
+				    <div class="skill">
+				        <p>Data Transformation & Modeling</p>
+				        <div class="progress-bar"><div class="progress" style="width: 88%;"></div></div>
+				    </div>
+				
+				    <h3>ETL & Data Integration</h3>
+				    <div class="skill">
+				        <p>Azure Data Factory (ADF)</p>
+				        <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+				    </div>
+				    <div class="skill">
+				        <p>Power Query</p>
+				        <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+				    </div>
+				    <div class="skill">
+				        <p>Pipelines</p>
+				        <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
+				    </div>
+				
+				    <h3>Programming & Scripting</h3>
+				    <div class="skill">
+				        <p>Python</p>
+				        <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+				    </div>
+				    <div class="skill">
+				        <p>R</p>
+				        <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+				    </div>
+				    <div class="skill">
+				        <p>HTML & CSS</p>
+				        <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+				    </div>
+				    <div class="skill">
+				        <p>IronPython</p>
+				        <div class="progress-bar"><div class="progress" style="width: 65%;"></div></div>
+				    </div>
+				
+				    <h3>Database Management</h3>
+				    <div class="skill">
+				        <p>SQL Server</p>
+				        <div class="progress-bar"><div class="progress" style="width: 88%;"></div></div>
+				    </div>
+				    <div class="skill">
+				        <p>Azure SQL</p>
+				        <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+				    </div>
+				    <div class="skill">
+				        <p>Azure Data Lake</p>
+				        <div class="progress-bar"><div class="progress" style="width: 78%;"></div></div>
+				    </div>
+				
+				    <h3>Soft Skills</h3>
+					<div class="skill">
+					    <p>Requirement Gathering</p>
+					    <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+					</div>
+					<div class="skill">
+					    <p>Business Analysis</p>
+					    <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+					</div>
+					<div class="skill">
+					    <p>Storytelling with Data</p>
+					    <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+					</div>
+					<div class="skill">
+					    <p>Problem Solving</p>
+					    <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+					</div>
+					<div class="skill">
+					    <p>Stakeholder Communication</p>
+					    <div class="progress-bar"><div class="progress" style="width: 88%;"></div></div>
+					</div>
+					<div class="skill">
+					    <p>Team Collaboration</p>
+					    <div class="progress-bar"><div class="progress" style="width: 87%;"></div></div>
+					</div>
 
+				    </br>
+				    </div>
 
 				</div>
 			</section>
