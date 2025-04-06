@@ -197,34 +197,45 @@
 				    // Technical Skills Radar Chart
 				    new Chart(document.getElementById('technicalSkillsChart'), {
 				      type: 'radar',
-					data: {
-					  labels: [
-					    'Power BI',
-					    'TIBCO Spotfire',
-					    'Tableau',
-					    'Excel',
-					    'SQL',
-					    'Python',
-					    'Azure Data Factory',
-					    'Data Modeling',
-					    'ETL & Data Integration',
-					    'DAX & Power Query',
-					    'Data Visualization',
-					    'Azure Data Platform'
-					  ],
-					  datasets: [{
-					    label: 'Technical Skills',
-					    data: [90, 90, 60, 70, 90, 40, 50, 80, 70, 80, 90, 60], // scaled to 100
-					    fill: true,
-					    backgroundColor: 'rgba(54, 162, 235, 0.2)',
-					    borderColor: 'rgba(54, 162, 235, 1)',
-					    pointBackgroundColor: 'rgba(54, 162, 235, 1)',
-					    pointBorderColor: '#fff',
-					    pointHoverBackgroundColor: '#fff',
-					    pointHoverBorderColor: 'rgba(54, 162, 235, 1)'
-					  }]
-					}
-					);
+				      data: {
+				        labels: [
+				          'Power BI',
+				          'TIBCO Spotfire',
+				          'Tableau',
+				          'Excel',
+				          'SQL',
+				          'Python',
+				          'Azure Data Factory',
+				          'Data Modeling',
+						'ETL & Data Integration',
+						'DAX & Power Query',
+						'Data Visualization',
+						'Azure Data Platform'
+						
+						
+				        ],
+				        datasets: [{
+				          label: 'BI & Analytics Skillset',
+				          data: [90, 90, 60, 70, 90, 40, 50, 80, 70, 80, 90, 60],
+				          backgroundColor: 'rgba(0, 123, 255, 0.2)',
+				          borderColor: 'rgba(0, 123, 255, 1)',
+				          pointBackgroundColor: 'rgba(0, 123, 255, 1)'
+				        }]
+				      },
+				      options: {
+				        responsive: true,
+				        plugins: {
+				          legend: { display: false }
+				        },
+				        scales: {
+				          r: {
+				            suggestedMin: 50,
+				            suggestedMax: 100,
+				            ticks: { stepSize: 10 }
+				          }
+				        }
+				      }
+				    });
 				
 				    // Soft Skills Radar Chart
 				    new Chart(document.getElementById('softSkillsChart'), {
