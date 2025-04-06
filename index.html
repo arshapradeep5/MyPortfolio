@@ -214,7 +214,7 @@
 					  ],
 					  datasets: [{
 					    label: 'Technical Skills',
-					    data: [9, 9, 6, 7, 9, 4, 5, 8, 7, 8, 9, 6],
+					    data: [90, 90, 60, 70, 90, 40, 50, 80, 70, 80, 90, 60], // scaled to 100
 					    fill: true,
 					    backgroundColor: 'rgba(54, 162, 235, 0.2)',
 					    borderColor: 'rgba(54, 162, 235, 1)',
@@ -224,21 +224,7 @@
 					    pointHoverBorderColor: 'rgba(54, 162, 235, 1)'
 					  }]
 					}
-,
-				      options: {
-				        responsive: true,
-				        plugins: {
-				          legend: { display: false }
-				        },
-				        scales: {
-				          r: {
-				            suggestedMin: 50,
-				            suggestedMax: 100,
-				            ticks: { stepSize: 10 }
-				          }
-				        }
-				      }
-				    });
+					);
 				
 				    // Soft Skills Radar Chart
 				    new Chart(document.getElementById('softSkillsChart'), {
