@@ -197,25 +197,34 @@
 				    // Technical Skills Radar Chart
 				    new Chart(document.getElementById('technicalSkillsChart'), {
 				      type: 'radar',
-				      data: {
-				        labels: [
-				          'Power BI',
-				          'SQL',
-				          'DAX',
-				          'Python',
-				          'Tableau',
-				          'TIBCO Spotfire',
-				          'Azure Data Factory',
-				          'Data Modeling'
-				        ],
-				        datasets: [{
-				          label: 'Technical Skills',
-				          data: [98, 95, 90, 85, 95, 95, 75, 90],
-				          backgroundColor: 'rgba(0, 123, 255, 0.2)',
-				          borderColor: 'rgba(0, 123, 255, 1)',
-				          pointBackgroundColor: 'rgba(0, 123, 255, 1)'
-				        }]
-				      },
+					data: {
+					  labels: [
+					    'Power BI',
+					    'TIBCO Spotfire',
+					    'Tableau',
+					    'Excel',
+					    'SQL',
+					    'Python',
+					    'Azure Data Factory',
+					    'Data Modeling',
+					    'ETL & Data Integration',
+					    'DAX & Power Query',
+					    'Data Visualization',
+					    'Azure Data Platform'
+					  ],
+					  datasets: [{
+					    label: 'Technical Skills',
+					    data: [9, 9, 6, 7, 9, 4, 5, 8, 7, 8, 9, 6],
+					    fill: true,
+					    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+					    borderColor: 'rgba(54, 162, 235, 1)',
+					    pointBackgroundColor: 'rgba(54, 162, 235, 1)',
+					    pointBorderColor: '#fff',
+					    pointHoverBackgroundColor: '#fff',
+					    pointHoverBorderColor: 'rgba(54, 162, 235, 1)'
+					  }]
+					}
+,
 				      options: {
 				        responsive: true,
 				        plugins: {
