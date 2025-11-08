@@ -16,13 +16,19 @@
             object-fit: cover;
         }
 
-        h3 {
-            text-align: left;
-            margin-top: 20px;
-            color: #00b4d8;
+        /* Animation Styles */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
         }
 
-        /* UI/UX Enhancements Section Styling */
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* UI/UX Enhancements Section */
         #uiux {
             background: #0f1115;
             color: #fff;
@@ -30,14 +36,6 @@
             border-radius: 20px;
             box-shadow: 0 0 30px rgba(0, 188, 212, 0.25);
             margin: 4em 0;
-            opacity: 0;
-            transform: translateY(50px);
-            transition: opacity 1s ease-out, transform 1s ease-out;
-        }
-
-        #uiux.visible {
-            opacity: 1;
-            transform: translateY(0);
         }
 
         #uiux h1 {
@@ -58,6 +56,12 @@
             transform: scale(1.01);
             transition: all 0.4s ease;
         }
+
+        h3 {
+            text-align: left;
+            margin-top: 20px;
+            color: #00b4d8;
+        }
     </style>
 </head>
 
@@ -67,7 +71,7 @@
     <div id="wrapper">
 
         <!-- Intro -->
-        <div id="intro">
+        <div id="intro" class="fade-in">
             <a href="#" class="image avatar"><img src="images/Arsha.jpg" alt="Arsha Pradeep" /></a><br>
             <h1>Arsha Pradeep</h1>
             <h2>Senior BI Developer</h2>
@@ -101,11 +105,11 @@
 
         <!-- Main -->
         <div id="main">
-            <center><h1>What I've Built</h1></center>
+            <center><h1 class="fade-in">What I've Built</h1></center>
 
             <!-- Projects -->
             <section class="posts">
-                <article>
+                <article class="fade-in">
                     <header>
                         <h2><a href="https://arshapradeep5.github.io/SpyFi-Financial-Fraud-Intelligence-Dashboard/">SpyFi - Financial Fraud Intelligence Dashboard</a></h2>
                     </header>
@@ -116,155 +120,19 @@
                     </ul>
                 </article>
 
-                <article>
+                <article class="fade-in">
                     <header>
                         <h2><a href="https://github.com/arshapradeep5/Banking-Fraud-Detection-SQL">Banking Fraud Detection - SQL Automation Project</a></h2>
                     </header>
-                    <a href="https://github.com/arshapradeep5/Banking-Fraud-Detection-SQL" class="image fit"><img src="images/banking.jpg" alt="Banking Fraud Detection" /></a>	
+                    <a href="https://github.com/arshapradeep5/Banking-Fraud-Detection-SQL" class="image fit"><img src="images/banking.jpg" alt="Banking Fraud Detection" /></a>    
                     <p>A SQL-based data analytics project that detects suspicious transactions using stored procedures, views, and scheduled automation. Designed to flag fraudulent banking activities and support proactive fraud monitoring. Includes schema design, data modeling, and automation using SQL Server Agent.</p>
                     <ul class="actions special">
                         <li><a href="https://github.com/arshapradeep5/Banking-Fraud-Detection-SQL" class="button">Project Details</a></li>
                     </ul>
                 </article>
 
-                <article>
+                <article class="fade-in">
                     <header>
                         <h2><a href="https://arshapradeep5.github.io/Performly_Performance-Dashboard/">Performance Dashboard in Power BI</a></h2>
                     </header>
-                    <a href="https://arshapradeep5.github.io/Performly_Performance-Dashboard/" class="image fit"><img src="images/Performance.png" alt="Performance Dashboard" /></a>
-                    <p>Designed for business leaders to track KPIs, spot top performers, and identify trends with row-level security. Built using Power BI, DAX, and Power Query.</p>
-                    <ul class="actions special">
-                        <li><a href="https://arshapradeep5.github.io/Performly_Performance-Dashboard/" class="button">Project Details</a></li>
-                    </ul>
-                </article>
-
-                <article>
-                    <header>
-                        <h2><a href="https://arshapradeep5.github.io/PowerBI-Sales-Dashboard/">Sales & Inventory Analytics Report</a></h2>
-                    </header>
-                    <a href="https://arshapradeep5.github.io/PowerBI-Sales-Dashboard/" class="image fit"><img src="images/Sales Overview.png" alt="Sales Report" /></a>
-                    <p>Built a consolidated Power BI report for a retail client. Combined sales, inventory, and purchase data with custom DAX KPIs and conditional formatting.</p>
-                    <ul class="actions special">
-                        <li><a href="https://arshapradeep5.github.io/PowerBI-Sales-Dashboard/" class="button">Project Details</a></li>
-                    </ul>
-                </article>
-
-                <article>
-                    <header>
-                        <h2><a href="#">SpendSense - Expense Tracker App</a></h2>
-                    </header>
-                    <p>A Power BI mobile-friendly dashboard that empowers individuals to track and manage their personal finances with ease. SpendSense delivers clear, interactive insights into income, expenses, and savings, helping users make smarter financial decisions.</p>
-                    <ul class="actions special">
-                        <li><a href="spendsense-details.html" class="button">Project Details</a></li>
-                    </ul>
-                </article>
-            </section>
-
-            <!-- Leadership Highlight: UI/UX Enhancements -->
-            <section id="uiux">
-              <header class="major" style="text-align:center;">
-                <h1>UI/UX Enhancements – Core Design Initiative</h1>
-                <p style="color:#ccc;">Leadership Highlight: Building Unified BI Design Standards & Modern Visual Frameworks</p>
-              </header>
-
-              <div style="max-width:900px;margin:auto;text-align:center;">
-                <p>
-                  As part of my recent initiative, I led the <strong>UI/UX Core Design Team</strong> to enhance dashboard usability,
-                  modernize visual aesthetics, and establish unified Power BI and reporting design frameworks across projects.
-                </p>
-
-                <p>
-                  This initiative focused on improving user experience, accessibility, and cross-platform consistency — ensuring
-                  that all dashboards and apps deliver a professional, intuitive, and cohesive experience.
-                </p>
-
-                <div class="box alt" style="margin:3em 0;">
-                  <div class="row gtr-50 gtr-uniform">
-                    <div class="col-4"><span class="image fit"><img src="images/uiux1.jpg" alt="UI Template" style="border-radius:10px;" /></span></div>
-                    <div class="col-4"><span class="image fit"><img src="images/uiux2.jpg" alt="Design Framework" style="border-radius:10px;" /></span></div>
-                    <div class="col-4"><span class="image fit"><img src="images/uiux3.jpg" alt="Enhanced Layouts" style="border-radius:10px;" /></span></div>
-                  </div>
-                </div>
-
-                <h3>Key Highlights</h3>
-                <ul style="list-style:none;padding:0;max-width:700px;margin:auto;text-align:left;">
-                  <li>💡 Led a <strong>cross-functional UI/UX team</strong> to define dashboard usability standards and branding.</li>
-                  <li>🎨 Created <strong>Power BI visual frameworks</strong> and reusable templates for consistent design.</li>
-                  <li>🧠 Improved <strong>report accessibility and visual hierarchy</strong> through user-focused layouts.</li>
-                  <li>⚙️ Developed <strong>modern UI prototypes</strong> aligned with Power Platform and corporate themes.</li>
-                  <li>🤝 Collaborated with developers, analysts, and stakeholders to standardize experience across teams.</li>
-                </ul>
-
-                <ul class="actions" style="margin-top:2em;text-align:center;">
-                  <li><a href="elements.html#uiux" class="button primary">View Full Case Study</a></li>
-                </ul>
-              </div>
-            </section>
-
-            <!-- Skills -->
-            <section id="skills">
-                <header class="major">
-                    <h2>Skills & Expertise</h2>
-                </header>
-
-                <h3 style="text-align:center;">BI & Analytics Skillset</h3>
-                <canvas id="technicalSkillsChart" style="max-width: 600px; margin: 0 auto 40px auto;"></canvas>
-
-                <h3 style="text-align:center;">Soft Skills</h3>
-                <canvas id="softSkillsChart" style="max-width: 600px; margin: 0 auto 40px auto;"></canvas>
-            </section>
-        </div>
-
-        <!-- Footer -->
-        <footer id="footer">
-            <section class="split contact">
-                <section class="alt">
-                    <h3>Location</h3>
-                    <p>Hyderabad, India</p>
-                </section>
-                <section>
-                    <h3>Phone</h3>
-                    <p><a href="tel:+919072275483">+91 9072275483</a></p>
-                </section>
-                <section>
-                    <h3>Email</h3>
-                    <p><a href="mailto:arshapradeep0306@gmail.com">arshapradeep0306@gmail.com</a></p>
-                </section>
-                <section>
-                    <h3>Social</h3>
-                    <ul class="icons alt">
-                        <li><a href="https://www.linkedin.com/in/arsha-pradeep-943914188/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                        <li><a href="https://github.com/arshapradeep5" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-                    </ul>
-                </section>
-            </section>
-        </footer>
-
-        <div id="copyright">
-            <ul><li>&copy; Arsha Pradeep</li></ul>
-        </div>
-    </div>
-
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-
-    <script>
-      // Fade-in animation for UI/UX section
-      $(window).on('scroll', function() {
-        var uiux = $('#uiux');
-        var top = uiux.offset().top - $(window).scrollTop();
-        var windowHeight = $(window).height();
-        if (top < windowHeight - 100) {
-          uiux.addClass('visible');
-        }
-      });
-    </script>
-
-</body>
-</html>
+                    <a href="https://arshapradeep5.github.io/Performly_Performance-Dashboard/" class="image fit"><img src="images_
