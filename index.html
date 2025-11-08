@@ -15,7 +15,6 @@
         font-family: "Inter", sans-serif;
       }
 
-      /* Smooth fade animation */
       .fade-in {
         opacity: 0;
         transform: translateY(40px);
@@ -26,7 +25,6 @@
         transform: translateY(0);
       }
 
-      /* Avatar */
       .image.avatar img {
         width: 200px;
         height: 200px;
@@ -35,32 +33,20 @@
         box-shadow: 0 0 25px rgba(0, 123, 255, 0.3);
       }
 
-      /* Header */
-      header#header .logo {
-        font-weight: 700;
-        letter-spacing: 1px;
-        color: #00bcd4;
-      }
-
-      /* Section Headings */
-      h1, h2, h3 {
-        color: #00bcd4;
-      }
-
-      /* Buttons */
       .button {
         border-radius: 8px;
         border: 2px solid #00bcd4;
         color: #00bcd4 !important;
         transition: all 0.3s ease;
+        text-transform: uppercase;
+        font-weight: 600;
       }
       .button:hover {
         background: #00bcd4;
         color: #fff !important;
-        transform: scale(1.03);
+        transform: scale(1.05);
       }
 
-      /* Projects Grid */
       .posts article {
         transition: transform 0.4s ease, box-shadow 0.4s ease;
       }
@@ -69,7 +55,7 @@
         box-shadow: 0 0 20px rgba(0, 123, 255, 0.15);
       }
 
-      /* ---------------- UI/UX Section ---------------- */
+      /* UI/UX Section */
       #uiux {
         background: radial-gradient(circle at top left, #0f1115, #0b1d24);
         color: #fff;
@@ -79,11 +65,9 @@
         text-align: center;
         max-width: 1200px;
         box-shadow: 0 0 40px rgba(0, 188, 212, 0.25);
-        overflow: hidden;
         position: relative;
       }
 
-      /* Animated gradient border */
       #uiux::before {
         content: "";
         position: absolute;
@@ -93,9 +77,7 @@
         background: linear-gradient(90deg, #00bcd4, #14ffec, #00bcd4);
         background-size: 200% 200%;
         animation: gradientMove 8s linear infinite;
-        -webkit-mask: 
-          linear-gradient(#fff 0 0) content-box, 
-          linear-gradient(#fff 0 0);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
         -webkit-mask-composite: xor;
                 mask-composite: exclude;
       }
@@ -158,7 +140,6 @@
         font-size: 0.95em;
       }
 
-      /* ---------------- Skills ---------------- */
       #skills {
         text-align: center;
         padding: 4em 0;
@@ -173,7 +154,6 @@
         display: block;
       }
 
-      /* ---------------- Contact ---------------- */
       #contact {
         text-align: center;
         margin: 5em auto;
@@ -249,33 +229,48 @@
             <header><h2><a href="https://arshapradeep5.github.io/SpyFi-Financial-Fraud-Intelligence-Dashboard/">SpyFi - Financial Fraud Intelligence Dashboard</a></h2></header>
             <a href="https://arshapradeep5.github.io/SpyFi-Financial-Fraud-Intelligence-Dashboard/" class="image fit"><img src="images/SpyFi.jpg" alt="SpyFi Dashboard" /></a>
             <p>End-to-end Fraud Detection & Financial Intelligence dashboard built in Power BI for transaction monitoring and anomaly detection.</p>
+            <ul class="actions special">
+              <li><a href="https://arshapradeep5.github.io/SpyFi-Financial-Fraud-Intelligence-Dashboard/" class="button">Project Details</a></li>
+            </ul>
           </article>
 
           <article>
             <header><h2><a href="https://github.com/arshapradeep5/Banking-Fraud-Detection-SQL">Banking Fraud Detection – SQL Automation Project</a></h2></header>
             <a href="https://github.com/arshapradeep5/Banking-Fraud-Detection-SQL" class="image fit"><img src="images/banking.jpg" alt="Banking Fraud Detection" /></a>
             <p>SQL-based data analytics project to detect suspicious transactions using stored procedures, views, and automated triggers.</p>
+            <ul class="actions special">
+              <li><a href="https://github.com/arshapradeep5/Banking-Fraud-Detection-SQL" class="button">Project Details</a></li>
+            </ul>
           </article>
 
           <article>
             <header><h2><a href="https://arshapradeep5.github.io/Performly_Performance-Dashboard/">Performance Dashboard</a></h2></header>
             <a href="https://arshapradeep5.github.io/Performly_Performance-Dashboard/" class="image fit"><img src="images/Performance.png" alt="Performance Dashboard" /></a>
             <p>Power BI dashboard for tracking KPIs, performance trends, and top performer insights with RLS implementation.</p>
+            <ul class="actions special">
+              <li><a href="https://arshapradeep5.github.io/Performly_Performance-Dashboard/" class="button">Project Details</a></li>
+            </ul>
           </article>
 
           <article>
             <header><h2><a href="https://arshapradeep5.github.io/PowerBI-Sales-Dashboard/">Sales & Inventory Analytics Report</a></h2></header>
             <a href="https://arshapradeep5.github.io/PowerBI-Sales-Dashboard/" class="image fit"><img src="images/Sales Overview.png" alt="Sales Dashboard" /></a>
             <p>Comprehensive Power BI report integrating sales, inventory, and purchase data with KPI cards and trend analytics.</p>
+            <ul class="actions special">
+              <li><a href="https://arshapradeep5.github.io/PowerBI-Sales-Dashboard/" class="button">Project Details</a></li>
+            </ul>
           </article>
 
           <article>
             <header><h2><a href="#">SpendSense - Expense Tracker App</a></h2></header>
             <p>Mobile-friendly Power BI dashboard to track and manage personal finances. Includes expense categorization and savings insights.</p>
+            <ul class="actions special">
+              <li><a href="#" class="button">Project Details</a></li>
+            </ul>
           </article>
         </section>
 
-        <!-- UI/UX Leadership Section -->
+        <!-- UI/UX Section -->
         <section id="uiux" class="fade-in">
           <header class="major">
             <h1>UI/UX Enhancements – Core Design Initiative</h1>
@@ -317,7 +312,6 @@
         </section>
       </div>
 
-      <!-- Footer -->
       <footer>
         <p>&copy; 2025 Arsha Pradeep | Designed with ❤️ using HTML5 UP</p>
       </footer>
@@ -332,7 +326,6 @@
     <script src="assets/js/main.js"></script>
 
     <script>
-      // Chart setup
       new Chart(document.getElementById('technicalSkillsChart'), {
         type: 'radar',
         data: {
@@ -361,7 +354,6 @@
         options: {plugins:{legend:{display:false}},scales:{r:{suggestedMin:50,suggestedMax:100}}}
       });
 
-      // Scroll animations
       function revealOnScroll() {
         document.querySelectorAll('.fade-in').forEach(el => {
           if (el.getBoundingClientRect().top < window.innerHeight - 100) el.classList.add('visible');
