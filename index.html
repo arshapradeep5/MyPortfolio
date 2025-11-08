@@ -47,53 +47,6 @@
         transform: scale(1.05);
       }
 
-      /* Modern "View My Work" button */
-      .scroll-btn {
-        display: inline-block;
-        padding: 14px 34px;
-        border-radius: 40px;
-        border: 2px solid #00bcd4;
-        color: #00bcd4 !important;
-        font-weight: 600;
-        letter-spacing: 0.8px;
-        font-size: 1.05em;
-        text-transform: uppercase;
-        text-decoration: none;
-        background: rgba(255,255,255,0.05);
-        backdrop-filter: blur(6px);
-        transition: all 0.4s ease;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .scroll-btn:hover {
-        background: linear-gradient(90deg, #00bcd4, #14ffec);
-        color: #fff !important;
-        box-shadow: 0 0 20px rgba(0, 188, 212, 0.5);
-        transform: translateY(-2px);
-      }
-
-      .scroll-btn::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        border-radius: 40px;
-        border: 2px solid rgba(0, 188, 212, 0.6);
-        animation: pulse 2.5s infinite ease-in-out;
-      }
-
-      @keyframes pulse {
-        0%, 100% { transform: scale(1); opacity: 0.8; }
-        50% { transform: scale(1.1); opacity: 0.3; }
-      }
-
-      @media screen and (max-width: 768px) {
-        .scroll-btn {
-          padding: 12px 26px;
-          font-size: 1em;
-        }
-      }
-
       .posts article {
         transition: transform 0.4s ease, box-shadow 0.4s ease;
       }
@@ -243,9 +196,7 @@
         <p>I’m a BI Developer with 5 years of experience turning data into impactful insights using Power BI, SQL, Tableau, and TIBCO Spotfire.</p>
         <p><em>Data doesn’t lie—if you know how to listen. I make sure it speaks clearly.</em></p>
         <ul class="actions">
-          <li>
-            <a href="#main" class="scroll-btn scrolly">View My Work</a>
-          </li>
+          <li><a href="#main" class="button icon solid solo fa-arrow-down scrolly">Explore</a></li>
         </ul>
       </div>
 
@@ -404,4 +355,18 @@
       });
 
       function revealOnScroll() {
-       
+        document.querySelectorAll('.fade-in').forEach(el => {
+          if (el.getBoundingClientRect().top < window.innerHeight - 100) el.classList.add('visible');
+        });
+
+        document.querySelectorAll('#uiux img').forEach(img => {
+          if (img.getBoundingClientRect().top < window.innerHeight - 100) img.classList.add('visible');
+        });
+      }
+      window.addEventListener('scroll', revealOnScroll);
+      revealOnScroll();
+    </script>
+  </body>
+</html>
+
+
