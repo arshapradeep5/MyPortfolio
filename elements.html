@@ -1,190 +1,152 @@
 <!DOCTYPE HTML>
 <html lang="en">
   <head>
-    <title>UI/UX Enhancements – Case Study | Arsha Pradeep</title>
+    <title>UI/UX Enhancements – Core Design Initiative | Arsha Pradeep</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta name="description" content="UI/UX Enhancements Case Study by Arsha Pradeep – Standardizing BI design frameworks and improving dashboard usability." />
+    <meta name="description" content="UI/UX leadership highlight by Arsha Pradeep – building unified BI design standards and improving Power BI dashboard usability." />
     <link rel="stylesheet" href="assets/css/main.css" />
+
     <style>
-      /* Background gradient and global styling */
       body {
-        background: linear-gradient(160deg, #0d1117 0%, #081c24 100%);
-        color: #e8e8e8;
-        font-family: 'Open Sans', sans-serif;
-        line-height: 1.8;
+        background: linear-gradient(180deg, #0d1117, #111b24);
+        color: #fff;
+        font-family: "Inter", sans-serif;
         margin: 0;
         padding: 0;
       }
 
       #main {
-        padding: 3em 2em;
-        max-width: 950px;
-        margin: auto;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 4em 2em;
       }
 
       h1, h2, h3 {
         color: #00bcd4;
+        text-align: center;
+        letter-spacing: 1px;
       }
 
       p {
+        color: #ddd;
+        line-height: 1.7;
         font-size: 1.05em;
-        color: #d6d6d6;
-        text-align: justify;
       }
 
-      ul {
-        list-style: disc;
-        margin-left: 2em;
-      }
-
-      strong {
+      .highlight {
         color: #00bcd4;
+        font-weight: 600;
       }
 
-      header.major {
-        text-align: center;
-        margin-bottom: 3em;
-      }
-
-      header.major h1 {
-        font-size: 2.2em;
-        color: #00bcd4;
-      }
-
-      header.major p {
-        color: #bdbdbd;
-        font-style: italic;
-      }
-
-      .image.fit img {
-        width: 100%;
-        border-radius: 10px;
-        box-shadow: 0 0 25px rgba(0, 188, 212, 0.25);
-      }
-
-      /* Fade-in animation */
-      .fade-in {
-        opacity: 0;
-        transform: translateY(25px);
-        transition: opacity 1s ease-out, transform 1s ease-out;
-      }
-      .fade-in.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      /* Gallery grid */
-      .gallery {
-        margin-top: 3em;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      .images {
+        display: flex;
+        justify-content: center;
         gap: 1em;
+        flex-wrap: wrap;
+        margin: 2em 0;
       }
 
-      .gallery img {
-        width: 100%;
+      .images img {
+        width: 260px;
+        height: 160px;
         border-radius: 10px;
-        transition: transform 0.4s ease;
+        object-fit: cover;
+        box-shadow: 0 0 15px rgba(0, 188, 212, 0.25);
+        transition: transform 0.3s ease;
       }
 
-      .gallery img:hover {
+      .images img:hover {
         transform: scale(1.05);
       }
 
-      /* Buttons */
-      .button.primary {
-        background-color: #00bcd4;
-        border: none;
-        color: #fff;
-        padding: 0.9em 1.8em;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: 600;
+      .button {
         display: inline-block;
+        background: transparent;
+        border: 2px solid #00bcd4;
+        color: #00bcd4;
+        padding: 0.8em 1.6em;
+        border-radius: 8px;
+        font-weight: 600;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
         margin-top: 2em;
       }
 
-      .button.primary:hover {
-        background-color: #019db4;
+      .button:hover {
+        background: #00bcd4;
+        color: #0d1117;
       }
 
-      /* Header */
-      #header {
-        background: rgba(0, 0, 0, 0.2);
-        padding: 1.5em 2em;
-        text-align: left;
+      .section {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        padding: 2.5em;
+        margin-bottom: 3em;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
       }
 
-      #header a.logo {
-        text-decoration: none;
-        color: #00bcd4;
-        font-weight: 700;
-        font-size: 1.1em;
+      .back-btn {
+        display: block;
+        width: fit-content;
+        margin: 2em auto;
+        text-align: center;
       }
 
       footer {
         text-align: center;
-        margin-top: 3em;
-        padding: 1.5em 0;
         color: #aaa;
-        font-size: 0.9em;
+        margin: 3em 0 1em 0;
       }
+
       footer a {
         color: #00bcd4;
         text-decoration: none;
       }
+
       footer a:hover {
         text-decoration: underline;
       }
     </style>
   </head>
 
-  <body class="is-preload">
-    <!-- Wrapper -->
-    <div id="wrapper">
+  <body>
+    <section id="main">
+      <a href="index.html" class="button back-btn">← Back to Portfolio</a>
 
-      <!-- Header -->
-      <header id="header">
-        <a href="index.html" class="logo">← Back to Portfolio</a>
+      <header class="major">
+        <h1>UI/UX Enhancements – Core Design Initiative</h1>
+        <p><em>Leadership Highlight: Building Unified BI Design Standards & Modern Visual Frameworks</em></p>
       </header>
 
-      <!-- Main -->
-      <div id="main">
-        <section class="post fade-in">
-          <header class="major">
-            <h1>UI/UX Enhancements – Core Design Initiative</h1>
-            <p>Standardizing Power BI design systems and improving dashboard usability through modern visual frameworks.</p>
-          </header>
+      <div class="section">
+        <p>
+          As part of my leadership role in the <span class="highlight">UI/UX Core Team</span>, I spearheaded an initiative to redefine the visual and interactive experience of enterprise BI dashboards.
+          The goal was to achieve consistency, accessibility, and a polished, modern aesthetic across Power BI reports.
+        </p>
 
-          <div class="image fit">
-            <img src="images/uiux1.jpg" alt="UI/UX Core Design Initiative" />
-          </div>
+        <ul>
+          <li>Established a unified <span class="highlight">Power BI design framework</span> with brand-consistent colors and typography.</li>
+          <li>Developed <span class="highlight">reusable UI templates</span> for reports to accelerate development and ensure quality.</li>
+          <li>Enhanced <span class="highlight">user accessibility</span> through better contrast, navigation, and layout balance.</li>
+          <li>Led collaboration between designers and BI developers to embed usability principles into technical workflows.</li>
+          <li>Improved adoption by creating sleek, intuitive dashboards tailored to business decision-making.</li>
+        </ul>
 
-          <h2>Overview</h2>
-          <p>
-            As part of my leadership within the <strong>UI/UX Core Team</strong>, I initiated a company-wide effort to improve
-            the look, feel, and usability of Power BI dashboards. The goal was to build a unified design system
-            that ensures consistent visuals, enhanced accessibility, and scalable BI development across departments.
-          </p>
+        <div class="images">
+          <img src="images/uiux1.jpg" alt="Power BI Design Template" />
+          <img src="images/uiux2.jpg" alt="Modern Visualization Framework" />
+          <img src="images/uiux3.jpg" alt="User-Centric Layout Design" />
+        </div>
 
-          <h2>Key Objectives</h2>
-          <ul>
-            <li>Define <strong>unified Power BI design principles</strong> for consistent aesthetics and layout.</li>
-            <li>Develop <strong>modular templates</strong> for faster dashboard creation and reuse.</li>
-            <li>Enhance <strong>user experience</strong> through improved navigation and interaction flow.</li>
-            <li>Ensure <strong>accessibility compliance</strong> with balanced color contrast and readability.</li>
-          </ul>
+        <center>
+          <a href="index.html" class="button">Back to Portfolio</a>
+        </center>
+      </div>
 
-          <h2>My Core Contributions</h2>
-          <ul>
-            <li>Led a <strong>cross-functional UI/UX design team</strong> to establish company-wide Power BI standards.</li>
-            <li>Developed <strong>Power BI visual templates</strong> with predefined grid layouts and color frameworks.</li>
-            <li>Built a <strong>style guide</strong> improving typography, spacing, and data clarity across visuals.</li>
-            <li>Implemented <strong>color-blind friendly palettes</strong> to improve accessibility for all users.</li>
-            <li>Improved <strong>developer productivity</strong> by 40% through reusable theme JSON and layout templates.</li>
-          </ul>
-
-          <h2>Visual Gallery</h2>
-          <div class="gallery">
-            <img src="images/uiux1.jpg" alt
+      <footer>
+        <p>© 2025 Arsha Pradeep • <a href="mailto:arshapradeep0306@gmail.com">Contact Me</a></p>
+      </footer>
+    </section>
+  </body>
+</html>
