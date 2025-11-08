@@ -182,6 +182,19 @@
       @media screen and (max-width: 768px) {
         #uiux img { width: 100%; max-width: 350px; }
       }
+
+      /* Availability badge */
+      .availability {
+        background: rgba(0, 188, 212, 0.1);
+        border: 1px solid #00bcd4;
+        display: inline-block;
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-weight: 600;
+        color: #00bcd4;
+        margin-top: 10px;
+        font-size: 0.95em;
+      }
     </style>
   </head>
 
@@ -195,8 +208,11 @@
         <h2>Senior BI Developer</h2>
         <p>I’m a BI Developer with 5 years of experience turning data into impactful insights using Power BI, SQL, Tableau, and TIBCO Spotfire.</p>
         <p><em>Data doesn’t lie—if you know how to listen. I make sure it speaks clearly.</em></p>
-        <ul class="actions">
-          <li><a href="#main" class="button icon solid solo fa-arrow-down scrolly">Explore</a></li>
+
+        <!-- 🟢 Availability and Button -->
+        <p class="availability">🟢 Available for Opportunities</p>
+        <ul class="actions" style="margin-top: 20px;">
+          <li><a href="#main" class="button">View My Work</a></li>
         </ul>
       </div>
 
@@ -368,5 +384,3 @@
     </script>
   </body>
 </html>
-
-
