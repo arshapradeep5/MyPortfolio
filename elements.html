@@ -1,152 +1,271 @@
 <!DOCTYPE HTML>
 <html lang="en">
   <head>
-    <title>UI/UX Enhancements – Core Design Initiative | Arsha Pradeep</title>
+    <title>Arsha Pradeep | Portfolio</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta name="description" content="UI/UX leadership highlight by Arsha Pradeep – building unified BI design standards and improving Power BI dashboard usability." />
+    <meta name="description" content="Portfolio website of Arsha Pradeep, Senior BI Developer with expertise in Power BI, SQL, and data visualization." />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <style>
-      body {
-        background: linear-gradient(180deg, #0d1117, #111b24);
-        color: #fff;
-        font-family: "Inter", sans-serif;
-        margin: 0;
-        padding: 0;
-      }
+      body { background: #fff; color: #222; }
 
-      #main {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 4em 2em;
-      }
-
-      h1, h2, h3 {
-        color: #00bcd4;
-        text-align: center;
-        letter-spacing: 1px;
-      }
-
-      p {
-        color: #ddd;
-        line-height: 1.7;
-        font-size: 1.05em;
-      }
-
-      .highlight {
-        color: #00bcd4;
-        font-weight: 600;
-      }
-
-      .images {
-        display: flex;
-        justify-content: center;
-        gap: 1em;
-        flex-wrap: wrap;
-        margin: 2em 0;
-      }
-
-      .images img {
-        width: 260px;
-        height: 160px;
-        border-radius: 10px;
+      .image.avatar img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
         object-fit: cover;
-        box-shadow: 0 0 15px rgba(0, 188, 212, 0.25);
-        transition: transform 0.3s ease;
       }
 
-      .images img:hover {
-        transform: scale(1.05);
-      }
+      .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 1s, transform 1s; }
+      .fade-in.visible { opacity: 1; transform: translateY(0); }
 
-      .button {
-        display: inline-block;
-        background: transparent;
-        border: 2px solid #00bcd4;
-        color: #00bcd4;
-        padding: 0.8em 1.6em;
-        border-radius: 8px;
-        font-weight: 600;
-        text-transform: uppercase;
-        transition: all 0.3s ease;
-        margin-top: 2em;
-      }
-
-      .button:hover {
-        background: #00bcd4;
-        color: #0d1117;
-      }
-
-      .section {
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 12px;
-        padding: 2.5em;
-        margin-bottom: 3em;
-        box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
-      }
-
-      .back-btn {
-        display: block;
-        width: fit-content;
-        margin: 2em auto;
+      /* Leadership section */
+      #uiux {
+        background: linear-gradient(160deg, #0f1115, #081c24);
+        color: #fff;
+        padding: 4em 2em;
+        border-radius: 20px;
+        margin: 4em 0;
         text-align: center;
+        box-shadow: 0 0 25px rgba(0, 188, 212, 0.25);
+      }
+
+      #uiux h1 { color: #00bcd4; font-size: 2.3em; }
+      #uiux p { color: #ddd; }
+
+      #uiux img {
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 188, 212, 0.2);
+      }
+
+      /* Contact Section */
+      #contact {
+        text-align: center;
+        margin: 5em auto;
+        padding: 3em 1em;
+        background: #f9f9f9;
+        border-radius: 15px;
+        width: 90%;
+        max-width: 900px;
+        box-shadow: 0 0 25px rgba(0,0,0,0.05);
+      }
+
+      #contact h2 { color: #00bcd4; margin-bottom: 1em; }
+      #contact a { color: #00bcd4; text-decoration: none; }
+      #contact a:hover { text-decoration: underline; }
+
+      /* Skills */
+      #skills {
+        text-align: center;
+        padding: 4em 0;
+        background: #f0f8ff;
+        border-radius: 15px;
+        margin: 3em 0;
+      }
+
+      #skills h2 {
+        color: #00bcd4;
+        font-size: 2em;
+        margin-bottom: 1em;
+      }
+
+      #skills canvas {
+        max-width: 600px;
+        margin: 1.5em auto;
+        display: block;
       }
 
       footer {
+        background: #0f1115;
+        color: #fff;
         text-align: center;
-        color: #aaa;
-        margin: 3em 0 1em 0;
+        padding: 2em 0;
       }
 
-      footer a {
-        color: #00bcd4;
-        text-decoration: none;
-      }
-
-      footer a:hover {
-        text-decoration: underline;
-      }
+      footer a { color: #00bcd4; text-decoration: none; }
+      footer a:hover { text-decoration: underline; }
     </style>
   </head>
 
-  <body>
-    <section id="main">
-      <a href="index.html" class="button back-btn">← Back to Portfolio</a>
+  <body class="is-preload">
+    <div id="wrapper">
 
-      <header class="major">
-        <h1>UI/UX Enhancements – Core Design Initiative</h1>
-        <p><em>Leadership Highlight: Building Unified BI Design Standards & Modern Visual Frameworks</em></p>
+      <!-- Intro -->
+      <div id="intro" class="fade-in">
+        <a href="#" class="image avatar"><img src="images/Arsha.jpg" alt="Arsha Pradeep" /></a><br>
+        <h1>Arsha Pradeep</h1>
+        <h2>Senior BI Developer</h2>
+        <p>I’m a BI Developer with 5 years of experience turning data into impactful insights using Power BI, SQL, Tableau, and TIBCO Spotfire.</p>
+        <p><em>Data doesn’t lie—if you know how to listen. I make sure it speaks clearly.</em></p>
+        <ul class="actions">
+          <li><a href="#main" class="button icon solid solo fa-arrow-down scrolly">Explore</a></li>
+        </ul>
+      </div>
+
+      <!-- Header -->
+      <header id="header">
+        <a href="index.html" class="logo">Arsha Pradeep</a>
       </header>
 
-      <div class="section">
-        <p>
-          As part of my leadership role in the <span class="highlight">UI/UX Core Team</span>, I spearheaded an initiative to redefine the visual and interactive experience of enterprise BI dashboards.
-          The goal was to achieve consistency, accessibility, and a polished, modern aesthetic across Power BI reports.
-        </p>
-
-        <ul>
-          <li>Established a unified <span class="highlight">Power BI design framework</span> with brand-consistent colors and typography.</li>
-          <li>Developed <span class="highlight">reusable UI templates</span> for reports to accelerate development and ensure quality.</li>
-          <li>Enhanced <span class="highlight">user accessibility</span> through better contrast, navigation, and layout balance.</li>
-          <li>Led collaboration between designers and BI developers to embed usability principles into technical workflows.</li>
-          <li>Improved adoption by creating sleek, intuitive dashboards tailored to business decision-making.</li>
+      <!-- Navigation -->
+      <nav id="nav">
+        <ul class="links">
+          <li class="active"><a href="#intro">About</a></li>
+          <li><a href="#main">Projects</a></li>
+          <li><a href="#uiux">UI/UX Enhancements</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
+        <ul class="icons">
+          <li><a href="https://www.linkedin.com/in/arsha-pradeep-943914188/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+          <li><a href="https://github.com/arshapradeep5" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+        </ul>
+      </nav>
 
-        <div class="images">
-          <img src="images/uiux1.jpg" alt="Power BI Design Template" />
-          <img src="images/uiux2.jpg" alt="Modern Visualization Framework" />
-          <img src="images/uiux3.jpg" alt="User-Centric Layout Design" />
-        </div>
+      <!-- Main -->
+      <div id="main">
+        <center><h1>What I've Built</h1></center>
 
-        <center>
-          <a href="index.html" class="button">Back to Portfolio</a>
-        </center>
+        <section class="posts">
+          <article>
+            <header><h2><a href="https://arshapradeep5.github.io/SpyFi-Financial-Fraud-Intelligence-Dashboard/">SpyFi - Financial Fraud Intelligence Dashboard</a></h2></header>
+            <a href="https://arshapradeep5.github.io/SpyFi-Financial-Fraud-Intelligence-Dashboard/" class="image fit"><img src="images/SpyFi.jpg" alt="SpyFi Dashboard" /></a>
+            <p>End-to-end Fraud Detection & Financial Intelligence dashboard built in Power BI for transaction monitoring and anomaly detection.</p>
+            <ul class="actions special">
+              <li><a href="https://arshapradeep5.github.io/SpyFi-Financial-Fraud-Intelligence-Dashboard/" class="button">Project Details</a></li>
+            </ul>
+          </article>
+
+          <article>
+            <header><h2><a href="https://github.com/arshapradeep5/Banking-Fraud-Detection-SQL">Banking Fraud Detection – SQL Automation Project</a></h2></header>
+            <a href="https://github.com/arshapradeep5/Banking-Fraud-Detection-SQL" class="image fit"><img src="images/banking.jpg" alt="Banking Fraud Detection" /></a>
+            <p>SQL-based data analytics project to detect suspicious transactions using stored procedures, views, and automated triggers.</p>
+            <ul class="actions special">
+              <li><a href="https://github.com/arshapradeep5/Banking-Fraud-Detection-SQL" class="button">Project Details</a></li>
+            </ul>
+          </article>
+
+          <article>
+            <header><h2><a href="https://arshapradeep5.github.io/Performly_Performance-Dashboard/">Performance Dashboard</a></h2></header>
+            <a href="https://arshapradeep5.github.io/Performly_Performance-Dashboard/" class="image fit"><img src="images/Performance.png" alt="Performance Dashboard" /></a>
+            <p>Power BI dashboard for tracking KPIs, performance trends, and top performer insights with RLS implementation.</p>
+            <ul class="actions special">
+              <li><a href="https://arshapradeep5.github.io/Performly_Performance-Dashboard/" class="button">Project Details</a></li>
+            </ul>
+          </article>
+
+          <article>
+            <header><h2><a href="https://arshapradeep5.github.io/PowerBI-Sales-Dashboard/">Sales & Inventory Analytics Report</a></h2></header>
+            <a href="https://arshapradeep5.github.io/PowerBI-Sales-Dashboard/" class="image fit"><img src="images/Sales Overview.png" alt="Sales Dashboard" /></a>
+            <p>Comprehensive Power BI report integrating sales, inventory, and purchase data with KPI cards and trend analytics.</p>
+            <ul class="actions special">
+              <li><a href="https://arshapradeep5.github.io/PowerBI-Sales-Dashboard/" class="button">Project Details</a></li>
+            </ul>
+          </article>
+
+          <article>
+            <header><h2><a href="#">SpendSense - Expense Tracker App</a></h2></header>
+            <p>Mobile-friendly Power BI dashboard to track and manage personal finances. Includes expense categorization and savings insights.</p>
+            <ul class="actions special">
+              <li><a href="#" class="button">Project Details</a></li>
+            </ul>
+          </article>
+        </section>
+
+        <!-- UI/UX Leadership Section -->
+        <section id="uiux" class="fade-in">
+          <header class="major">
+            <h1>UI/UX Enhancements – Core Design Initiative</h1>
+            <p>Leadership Highlight: Building Unified BI Design Standards & Modern Visual Frameworks</p>
+          </header>
+
+          <p>Led the <strong>UI/UX Core Team</strong> to enhance dashboard usability, modernize Power BI visuals, and establish unified design frameworks for enterprise reporting.</p>
+
+          <div class="box alt" style="margin:3em 0;">
+            <div class="row gtr-50 gtr-uniform">
+              <div class="col-4"><span class="image fit"><img src="images/uiux1.jpg" alt="UI Template" /></span></div>
+              <div class="col-4"><span class="image fit"><img src="images/uiux2.jpg" alt="Design Framework" /></span></div>
+              <div class="col-4"><span class="image fit"><img src="images/uiux3.jpg" alt="Enhanced Layouts" /></span></div>
+            </div>
+          </div>
+
+          <ul class="actions" style="text-align:center;">
+            <li><a href="elements.html" class="button primary">View UI/UX Case Study</a></li>
+          </ul>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="fade-in">
+          <h2>Skills & Expertise</h2>
+          <h3>BI & Analytics Skillset</h3>
+          <canvas id="technicalSkillsChart"></canvas>
+          <h3>Soft Skills</h3>
+          <canvas id="softSkillsChart"></canvas>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="fade-in">
+          <h2>Let's Connect</h2>
+          <p><strong>📍 Location:</strong> Hyderabad, India</p>
+          <p><strong>📞 Phone:</strong> <a href="tel:+919072275483">+91 9072275483</a></p>
+          <p><strong>📧 Email:</strong> <a href="mailto:arshapradeep0306@gmail.com">arshapradeep0306@gmail.com</a></p>
+        </section>
       </div>
 
       <footer>
-        <p>© 2025 Arsha Pradeep • <a href="mailto:arshapradeep0306@gmail.com">Contact Me</a></p>
+        <p>&copy; 2025 Arsha Pradeep | Designed with ❤️ using HTML5 UP</p>
       </footer>
-    </section>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+      new Chart(document.getElementById('technicalSkillsChart'), {
+        type: 'radar',
+        data: {
+          labels: ['Power BI','Spotfire','Tableau','Excel','SQL','Python','ADF','Data Modeling','ETL','DAX','Visualization','Azure'],
+          datasets: [{
+            data: [95,95,85,85,95,75,75,95,95,90,95,70],
+            backgroundColor: 'rgba(0, 123, 255, 0.2)',
+            borderColor: 'rgba(0, 123, 255, 1)',
+            pointBackgroundColor: 'rgba(0, 123, 255, 1)'
+          }]
+        },
+        options: {plugins:{legend:{display:false}},scales:{r:{suggestedMin:50,suggestedMax:100}}}
+      });
+
+      new Chart(document.getElementById('softSkillsChart'), {
+        type: 'radar',
+        data: {
+          labels: ['Communication','Storytelling','Problem Solving','Collaboration','Thinking','Adaptability'],
+          datasets: [{
+            data: [90,90,90,85,87,83],
+            backgroundColor: 'rgba(40,167,69,0.2)',
+            borderColor: 'rgba(40,167,69,1)',
+            pointBackgroundColor: 'rgba(40,167,69,1)'
+          }]
+        },
+        options: {plugins:{legend:{display:false}},scales:{r:{suggestedMin:50,suggestedMax:100}}}
+      });
+
+      function revealOnScroll() {
+        var reveals = document.querySelectorAll('.fade-in');
+        for (var i = 0; i < reveals.length; i++) {
+          var windowHeight = window.innerHeight;
+          var elementTop = reveals[i].getBoundingClientRect().top;
+          if (elementTop < windowHeight - 100) reveals[i].classList.add('visible');
+        }
+      }
+      window.addEventListener('scroll', revealOnScroll);
+      revealOnScroll();
+    </script>
   </body>
 </html>
