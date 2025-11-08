@@ -1,217 +1,190 @@
 <!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Elements Reference - Massively by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-			/* Highlighted UI/UX Section Custom Styling */
-			#uiux {
-				background: #1a1a1a;
-				padding: 4em 2em;
-				border-radius: 20px;
-				box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
-				margin-top: 4em;
-				margin-bottom: 4em;
-			}
+<html lang="en">
+  <head>
+    <title>UI/UX Enhancements – Case Study | Arsha Pradeep</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="UI/UX Enhancements Case Study by Arsha Pradeep – Standardizing BI design frameworks and improving dashboard usability." />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+      /* Background gradient and global styling */
+      body {
+        background: linear-gradient(160deg, #0d1117 0%, #081c24 100%);
+        color: #e8e8e8;
+        font-family: 'Open Sans', sans-serif;
+        line-height: 1.8;
+        margin: 0;
+        padding: 0;
+      }
 
-			#uiux h1 {
-				color: #fff;
-				font-size: 2.5em;
-				font-weight: 700;
-				text-align: center;
-				margin-bottom: 0.2em;
-			}
+      #main {
+        padding: 3em 2em;
+        max-width: 950px;
+        margin: auto;
+      }
 
-			#uiux p.lead {
-				color: #ccc;
-				text-align: center;
-				font-size: 1.1em;
-				margin-bottom: 2em;
-			}
+      h1, h2, h3 {
+        color: #00bcd4;
+      }
 
-			#uiux ul {
-				color: #ddd;
-			}
+      p {
+        font-size: 1.05em;
+        color: #d6d6d6;
+        text-align: justify;
+      }
 
-			#uiux strong {
-				color: #00bcd4;
-			}
+      ul {
+        list-style: disc;
+        margin-left: 2em;
+      }
 
-			#uiux .button.primary {
-				background: #00bcd4;
-				color: #fff !important;
-				border: none;
-			}
+      strong {
+        color: #00bcd4;
+      }
 
-			#uiux .button.primary:hover {
-				background: #0097a7;
-			}
+      header.major {
+        text-align: center;
+        margin-bottom: 3em;
+      }
 
-			#uiux .image.fit img {
-				border-radius: 12px;
-			}
-		</style>
-	</head>
-	<body class="is-preload">
+      header.major h1 {
+        font-size: 2.2em;
+        color: #00bcd4;
+      }
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+      header.major p {
+        color: #bdbdbd;
+        font-style: italic;
+      }
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Massively</a>
-					</header>
+      .image.fit img {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 0 25px rgba(0, 188, 212, 0.25);
+      }
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li><a href="index.html">This is Massively</a></li>
-							<li><a href="generic.html">Generic Page</a></li>
-							<li class="active"><a href="elements.html">Elements Reference</a></li>
-							<li><a href="#uiux">UI/UX Enhancements</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+      /* Fade-in animation */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(25px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+      }
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
 
-				<!-- Main -->
-					<div id="main">
+      /* Gallery grid */
+      .gallery {
+        margin-top: 3em;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1em;
+      }
 
-						<!-- Existing Content Section -->
-						<section class="post">
-							<header class="major">
-								<h1>Elements<br />Reference</h1>
-							</header>
-							<p>This is your existing Elements Reference section content...</p>
-						</section>
+      .gallery img {
+        width: 100%;
+        border-radius: 10px;
+        transition: transform 0.4s ease;
+      }
 
-						<!-- ============================================= -->
-						<!-- NEW UI/UX ENHANCEMENTS SECTION STARTS HERE -->
-						<!-- ============================================= -->
-						<section id="uiux" class="post">
-							<header class="major">
-								<h1>UI/UX Enhancements</h1>
-								<p class="lead">Leading the UI/UX Core Team to Build Unified Design Standards</p>
-							</header>
+      .gallery img:hover {
+        transform: scale(1.05);
+      }
 
-							<p style="color:#ccc;">
-								In my current role, I have been <strong>leading the UI/UX Core Team</strong>, where I spearhead initiatives to enhance the user experience and visual consistency across internal dashboards and enterprise applications.
-							</p>
+      /* Buttons */
+      .button.primary {
+        background-color: #00bcd4;
+        border: none;
+        color: #fff;
+        padding: 0.9em 1.8em;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        display: inline-block;
+        margin-top: 2em;
+      }
 
-							<p style="color:#ccc;">
-								Our mission is to create reusable <strong>design templates</strong>, establish <strong>UI standards</strong>, and ensure every analytics product provides a seamless, accessible, and engaging experience.
-								Through collaboration with developers and analysts, we transformed the visual identity of our BI and application interfaces.
-							</p>
+      .button.primary:hover {
+        background-color: #019db4;
+      }
 
-							<div class="box alt">
-								<div class="row gtr-50 gtr-uniform">
-									<div class="col-4">
-										<span class="image fit"><img src="images/uiux1.jpg" alt="UI Template Preview" /></span>
-									</div>
-									<div class="col-4">
-										<span class="image fit"><img src="images/uiux2.jpg" alt="Dashboard Design Standards" /></span>
-									</div>
-									<div class="col-4">
-										<span class="image fit"><img src="images/uiux3.jpg" alt="Enhanced Report Layouts" /></span>
-									</div>
-								</div>
-							</div>
+      /* Header */
+      #header {
+        background: rgba(0, 0, 0, 0.2);
+        padding: 1.5em 2em;
+        text-align: left;
+      }
 
-							<h3 style="color:#fff;">Key Contributions</h3>
-							<ul>
-								<li>Led a cross-functional <strong>UI/UX Core Team</strong> to modernize report and dashboard designs.</li>
-								<li>Developed <strong>standardized Power BI templates</strong> ensuring visual harmony across departments.</li>
-								<li>Introduced <strong>modern color palettes</strong>, improved layout spacing, and typography systems.</li>
-								<li>Enhanced <strong>user experience</strong> by simplifying navigation and focusing on intuitive interactions.</li>
-								<li>Collaborated with business users, designers, and engineers to align on design principles and accessibility.</li>
-							</ul>
+      #header a.logo {
+        text-decoration: none;
+        color: #00bcd4;
+        font-weight: 700;
+        font-size: 1.1em;
+      }
 
-							<ul class="actions" style="margin-top:2em; text-align:center;">
-								<li><a href="#" class="button primary">View UI/UX Gallery</a></li>
-							</ul>
-						</section>
-						<!-- ============================================= -->
-						<!-- NEW UI/UX ENHANCEMENTS SECTION ENDS HERE -->
-						<!-- ============================================= -->
+      footer {
+        text-align: center;
+        margin-top: 3em;
+        padding: 1.5em 0;
+        color: #aaa;
+        font-size: 0.9em;
+      }
+      footer a {
+        color: #00bcd4;
+        text-decoration: none;
+      }
+      footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
 
-					</div>
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
 
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-						</section>
-						<section class="split contact">
-							<section class="alt">
-								<h3>Address</h3>
-								<p>1234 Somewhere Road #87257<br />
-								Nashville, TN 00000-0000</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">(000) 000-0000</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">info@untitled.tld</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
+      <!-- Header -->
+      <header id="header">
+        <a href="index.html" class="logo">← Back to Portfolio</a>
+      </header>
 
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
+      <!-- Main -->
+      <div id="main">
+        <section class="post fade-in">
+          <header class="major">
+            <h1>UI/UX Enhancements – Core Design Initiative</h1>
+            <p>Standardizing Power BI design systems and improving dashboard usability through modern visual frameworks.</p>
+          </header>
 
-			</div>
+          <div class="image fit">
+            <img src="images/uiux1.jpg" alt="UI/UX Core Design Initiative" />
+          </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+          <h2>Overview</h2>
+          <p>
+            As part of my leadership within the <strong>UI/UX Core Team</strong>, I initiated a company-wide effort to improve
+            the look, feel, and usability of Power BI dashboards. The goal was to build a unified design system
+            that ensures consistent visuals, enhanced accessibility, and scalable BI development across departments.
+          </p>
 
-	</body>
-</html>
+          <h2>Key Objectives</h2>
+          <ul>
+            <li>Define <strong>unified Power BI design principles</strong> for consistent aesthetics and layout.</li>
+            <li>Develop <strong>modular templates</strong> for faster dashboard creation and reuse.</li>
+            <li>Enhance <strong>user experience</strong> through improved navigation and interaction flow.</li>
+            <li>Ensure <strong>accessibility compliance</strong> with balanced color contrast and readability.</li>
+          </ul>
+
+          <h2>My Core Contributions</h2>
+          <ul>
+            <li>Led a <strong>cross-functional UI/UX design team</strong> to establish company-wide Power BI standards.</li>
+            <li>Developed <strong>Power BI visual templates</strong> with predefined grid layouts and color frameworks.</li>
+            <li>Built a <strong>style guide</strong> improving typography, spacing, and data clarity across visuals.</li>
+            <li>Implemented <strong>color-blind friendly palettes</strong> to improve accessibility for all users.</li>
+            <li>Improved <strong>developer productivity</strong> by 40% through reusable theme JSON and layout templates.</li>
+          </ul>
+
+          <h2>Visual Gallery</h2>
+          <div class="gallery">
+            <img src="images/uiux1.jpg" alt
