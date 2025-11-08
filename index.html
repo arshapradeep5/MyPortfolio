@@ -10,312 +10,349 @@
 
     <style>
       body {
-        background: #f8f9fa;
-        color: #222;
         font-family: "Inter", sans-serif;
+        background: #0e0b1e;
+        color: #fff;
+        margin: 0;
+        padding: 0;
       }
 
-      .fade-in {
-        opacity: 0;
-        transform: translateY(40px);
-        transition: opacity 1.2s ease, transform 1.2s ease;
-      }
-      .fade-in.visible {
-        opacity: 1;
-        transform: translateY(0);
+      /* --- HERO SECTION --- */
+      #hero {
+        background: radial-gradient(circle at 20% 20%, #2a0a62, #180c3f);
+        color: #fff;
+        text-align: center;
+        padding: 6em 2em 5em;
+        position: relative;
+        overflow: hidden;
       }
 
-      .image.avatar img {
-        width: 200px;
-        height: 200px;
+      .profile-img img {
+        width: 160px;
+        height: 160px;
         border-radius: 50%;
-        object-fit: cover;
-        box-shadow: 0 0 25px rgba(0, 123, 255, 0.3);
+        border: 4px solid #ff69b4;
+        box-shadow: 0 0 25px rgba(255,105,180,0.4);
+        transition: transform 0.3s ease;
+      }
+      .profile-img img:hover {
+        transform: scale(1.05);
+      }
+
+      #hero h1 {
+        font-size: 2.8em;
+        margin-top: 20px;
+        background: linear-gradient(90deg, #ff69b4, #8a2be2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      #hero .role {
+        font-weight: 600;
+        color: #00eaff;
+        font-size: 1.2em;
+      }
+
+      #hero .availability {
+        background: rgba(255,255,255,0.1);
+        padding: 0.4em 1em;
+        border-radius: 20px;
+        display: inline-block;
+        margin-top: 10px;
+        font-size: 0.9em;
+      }
+
+      #hero .intro-text {
+        margin-top: 20px;
+        max-width: 700px;
+        margin-inline: auto;
+        color: #ddd;
+        line-height: 1.8;
+      }
+
+      #hero .quote {
+        margin: 15px auto;
+        font-style: italic;
+        color: #aaa;
+      }
+
+      .hero-btn {
+        margin-top: 25px;
+        display: inline-block;
+        padding: 0.9em 2.2em;
+        border-radius: 25px;
+        color: #fff;
+        background: linear-gradient(90deg, #ff69b4, #8a2be2);
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+      .hero-btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(255,105,180,0.5);
+      }
+
+      /* --- PROJECTS --- */
+      #main {
+        background: #f9f9f9;
+        color: #222;
+        padding: 5em 2em;
+        border-radius: 30px 30px 0 0;
+      }
+
+      #main h1 {
+        color: #0b0b2b;
+        text-align: center;
+        font-size: 2em;
+        margin-bottom: 2em;
+      }
+
+      .posts {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2em;
+        margin: auto;
+        max-width: 1200px;
+      }
+
+      .posts article {
+        background: #fff;
+        padding: 2em;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .posts article:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      }
+
+      .posts img {
+        border-radius: 10px;
+        width: 100%;
+        height: auto;
       }
 
       .button {
         border-radius: 8px;
-        border: 2px solid #00bcd4;
-        color: #00bcd4 !important;
+        border: 2px solid #8a2be2;
+        color: #8a2be2 !important;
         transition: all 0.3s ease;
         text-transform: uppercase;
         font-weight: 600;
+        padding: 0.6em 1.5em;
+        text-decoration: none;
+        display: inline-block;
       }
+
       .button:hover {
-        background: #00bcd4;
+        background: linear-gradient(90deg, #8a2be2, #ff69b4);
         color: #fff !important;
         transform: scale(1.05);
       }
 
-      .posts article {
-        transition: transform 0.4s ease, box-shadow 0.4s ease;
-      }
-      .posts article:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 0 20px rgba(0, 123, 255, 0.15);
-      }
-
-      /* UI/UX Section */
+      /* --- UI/UX ENHANCEMENT --- */
       #uiux {
-        background: radial-gradient(circle at top left, #0f1115, #0b1d24);
+        background: radial-gradient(circle at top left, #141625, #0a0f1c);
         color: #fff;
         padding: 5em 2em;
-        border-radius: 25px;
-        margin: 5em auto;
         text-align: center;
-        max-width: 1200px;
-        box-shadow: 0 0 40px rgba(0, 188, 212, 0.25);
-        position: relative;
-      }
-
-      #uiux::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        border-radius: 25px;
-        padding: 2px;
-        background: linear-gradient(90deg, #00bcd4, #14ffec, #00bcd4);
-        background-size: 200% 200%;
-        animation: gradientMove 8s linear infinite;
-        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-        -webkit-mask-composite: xor;
-                mask-composite: exclude;
-      }
-
-      @keyframes gradientMove {
-        0% { background-position: 0% 50%; }
-        100% { background-position: 100% 50%; }
+        margin-top: 4em;
       }
 
       #uiux h1 {
-        font-size: 2.6em;
-        background: linear-gradient(90deg, #14ffec, #00bcd4, #4be8d9);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: 800;
-        letter-spacing: 1px;
-        margin-bottom: 0.5em;
+        color: #00eaff;
+        font-size: 2em;
       }
 
       #uiux p {
-        color: #d4d4d4;
+        max-width: 800px;
+        margin: 1.5em auto;
         line-height: 1.8;
-        max-width: 900px;
-        margin: 1em auto;
+        color: #ccc;
       }
 
       #uiux .comparison {
         display: flex;
         justify-content: center;
-        align-items: center;
-        gap: 2em;
         flex-wrap: wrap;
+        gap: 2em;
         margin-top: 3em;
       }
 
       #uiux img {
         border-radius: 15px;
-        box-shadow: 0 0 20px rgba(0, 188, 212, 0.3);
+        box-shadow: 0 0 25px rgba(0,234,255,0.25);
         width: 45%;
-        max-width: 420px;
-        opacity: 0;
-        transform: translateY(40px);
-        transition: all 1.2s ease;
-      }
-
-      #uiux img.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      #uiux img:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 25px rgba(20, 255, 236, 0.5);
+        max-width: 400px;
       }
 
       #uiux .caption {
-        color: #aaa;
-        font-style: italic;
         margin-top: 1em;
-        font-size: 0.95em;
+        font-style: italic;
+        color: #aaa;
       }
 
+      /* --- SKILLS --- */
       #skills {
+        background: #f4f6ff;
+        color: #222;
         text-align: center;
-        padding: 4em 0;
-        background: #f0f8ff;
-        border-radius: 20px;
-        margin: 3em 0;
+        padding: 4em 2em;
+      }
+
+      #skills h2 {
+        color: #8a2be2;
       }
 
       #skills canvas {
         max-width: 600px;
-        margin: 1.5em auto;
+        margin: 2em auto;
         display: block;
       }
 
+      /* --- CONTACT --- */
       #contact {
         text-align: center;
-        margin: 5em auto;
-        padding: 3em 1em;
-        background: #f9f9f9;
-        border-radius: 20px;
-        width: 90%;
-        max-width: 900px;
-        box-shadow: 0 0 25px rgba(0,0,0,0.05);
+        background: #fff;
+        padding: 3em 2em;
+        color: #222;
       }
 
-      #contact h2 { color: #00bcd4; margin-bottom: 1em; }
-      #contact a { color: #00bcd4; text-decoration: none; }
-      #contact a:hover { text-decoration: underline; }
+      #contact h2 {
+        color: #8a2be2;
+      }
 
+      #contact p a {
+        color: #8a2be2;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      #contact p a:hover {
+        text-decoration: underline;
+      }
+
+      /* --- FOOTER --- */
       footer {
-        background: #0f1115;
+        background: #0b0618;
         color: #fff;
         text-align: center;
         padding: 2em 0;
+        font-size: 0.9em;
       }
 
-      footer a { color: #00bcd4; text-decoration: none; }
-      footer a:hover { text-decoration: underline; }
+      footer a {
+        color: #ff69b4;
+        text-decoration: none;
+      }
 
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      /* --- RESPONSIVE --- */
       @media screen and (max-width: 768px) {
-        #uiux img { width: 100%; max-width: 350px; }
+        #uiux img {
+          width: 100%;
+        }
       }
     </style>
   </head>
 
   <body class="is-preload">
-    <div id="wrapper">
 
-      <!-- Intro -->
-      <div id="intro" class="fade-in">
-        <a href="#" class="image avatar"><img src="images/Arsha.jpg" alt="Arsha Pradeep" /></a><br>
-        <h1>Arsha Pradeep</h1>
-        <h2>Senior BI Developer</h2>
-        <p>I’m a BI Developer with 5 years of experience turning data into impactful insights using Power BI, SQL, Tableau, and TIBCO Spotfire.</p>
-        <p><em>Data doesn’t lie—if you know how to listen. I make sure it speaks clearly.</em></p>
-        <ul class="actions">
-          <li><a href="#main" class="button icon solid solo fa-arrow-down scrolly">Explore</a></li>
-        </ul>
+    <!-- HERO SECTION -->
+    <section id="hero">
+      <div class="profile-img">
+        <img src="images/Arsha.jpg" alt="Arsha Pradeep">
       </div>
+      <h1><span>ARSHA</span> PRADEEP</h1>
+      <p class="role">Senior BI Developer</p>
+      <span class="availability">🟢 Available for Opportunities</span>
+      <p class="intro-text">
+        I'm a BI Developer with <strong>5 years of experience</strong> turning data into impactful insights using
+        <strong>Power BI, SQL, Tableau,</strong> and <strong>TIBCO Spotfire</strong>.
+      </p>
+      <p class="quote">"Data doesn’t lie—if you know how to listen. I make sure it speaks clearly."</p>
+      <a href="#main" class="hero-btn">View My Work</a>
+    </section>
 
-      <!-- Header -->
-      <header id="header">
-        <a href="index.html" class="logo">Arsha Pradeep</a>
-      </header>
+    <!-- MAIN -->
+    <div id="main">
+      <h1>What I've Built</h1>
+      <section class="posts">
+        <article>
+          <header><h2>SpyFi - Financial Fraud Intelligence Dashboard</h2></header>
+          <a href="https://arshapradeep5.github.io/SpyFi-Financial-Fraud-Intelligence-Dashboard/"><img src="images/SpyFi.jpg" alt="SpyFi Dashboard"></a>
+          <p>End-to-end Financial Intelligence Dashboard in Power BI for fraud detection and risk management.</p>
+          <a href="https://arshapradeep5.github.io/SpyFi-Financial-Fraud-Intelligence-Dashboard/" class="button">Project Details</a>
+        </article>
 
-      <!-- Navigation -->
-      <nav id="nav">
-        <ul class="links">
-          <li class="active"><a href="#intro">About</a></li>
-          <li><a href="#main">Projects</a></li>
-          <li><a href="#uiux">UI/UX Enhancements</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <ul class="icons">
-          <li><a href="https://www.linkedin.com/in/arsha-pradeep-943914188/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-          <li><a href="https://github.com/arshapradeep5" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-        </ul>
-      </nav>
+        <article>
+          <header><h2>Banking Fraud Detection – SQL Automation</h2></header>
+          <a href="https://github.com/arshapradeep5/Banking-Fraud-Detection-SQL"><img src="images/banking.jpg" alt="SQL Project"></a>
+          <p>SQL-based fraud detection project using stored procedures, automation, and real-time alerting.</p>
+          <a href="https://github.com/arshapradeep5/Banking-Fraud-Detection-SQL" class="button">Project Details</a>
+        </article>
 
-      <!-- Main -->
-      <div id="main">
-        <center><h1>What I've Built</h1></center>
+        <article>
+          <header><h2>Performance Dashboard</h2></header>
+          <a href="https://arshapradeep5.github.io/Performly_Performance-Dashboard/"><img src="images/Performance.png" alt="Performance Dashboard"></a>
+          <p>Interactive Power BI dashboard for KPI tracking, trends, and workforce analytics with DAX and Power Query.</p>
+          <a href="https://arshapradeep5.github.io/Performly_Performance-Dashboard/" class="button">Project Details</a>
+        </article>
 
-        <section class="posts">
-          <article>
-            <header><h2><a href="https://arshapradeep5.github.io/SpyFi-Financial-Fraud-Intelligence-Dashboard/">SpyFi - Financial Fraud Intelligence Dashboard</a></h2></header>
-            <a href="https://arshapradeep5.github.io/SpyFi-Financial-Fraud-Intelligence-Dashboard/" class="image fit"><img src="images/SpyFi.jpg" alt="SpyFi Dashboard" /></a>
-            <p>End-to-end Fraud Detection & Financial Intelligence dashboard built in Power BI for transaction monitoring and anomaly detection.</p>
-            <ul class="actions special">
-              <li><a href="https://arshapradeep5.github.io/SpyFi-Financial-Fraud-Intelligence-Dashboard/" class="button">Project Details</a></li>
-            </ul>
-          </article>
+        <article>
+          <header><h2>Sales & Inventory Report</h2></header>
+          <a href="https://arshapradeep5.github.io/PowerBI-Sales-Dashboard/"><img src="images/Sales Overview.png" alt="Sales Report"></a>
+          <p>Unified Power BI solution integrating sales, inventory, and purchase KPIs with advanced DAX measures.</p>
+          <a href="https://arshapradeep5.github.io/PowerBI-Sales-Dashboard/" class="button">Project Details</a>
+        </article>
 
-          <article>
-            <header><h2><a href="https://github.com/arshapradeep5/Banking-Fraud-Detection-SQL">Banking Fraud Detection – SQL Automation Project</a></h2></header>
-            <a href="https://github.com/arshapradeep5/Banking-Fraud-Detection-SQL" class="image fit"><img src="images/banking.jpg" alt="Banking Fraud Detection" /></a>
-            <p>SQL-based data analytics project to detect suspicious transactions using stored procedures, views, and automated triggers.</p>
-            <ul class="actions special">
-              <li><a href="https://github.com/arshapradeep5/Banking-Fraud-Detection-SQL" class="button">Project Details</a></li>
-            </ul>
-          </article>
+        <article>
+          <header><h2>SpendSense - Expense Tracker</h2></header>
+          <img src="images/SpendSense.jpg" alt="Expense Tracker">
+          <p>Mobile-friendly Power BI dashboard for personal finance tracking and category-wise expense insights.</p>
+          <a href="#" class="button">Project Details</a>
+        </article>
+      </section>
 
-          <article>
-            <header><h2><a href="https://arshapradeep5.github.io/Performly_Performance-Dashboard/">Performance Dashboard</a></h2></header>
-            <a href="https://arshapradeep5.github.io/Performly_Performance-Dashboard/" class="image fit"><img src="images/Performance.png" alt="Performance Dashboard" /></a>
-            <p>Power BI dashboard for tracking KPIs, performance trends, and top performer insights with RLS implementation.</p>
-            <ul class="actions special">
-              <li><a href="https://arshapradeep5.github.io/Performly_Performance-Dashboard/" class="button">Project Details</a></li>
-            </ul>
-          </article>
+      <!-- UI/UX Enhancements -->
+      <section id="uiux">
+        <h1>UI/UX Enhancements – Core Design Initiative</h1>
+        <p>I led the <strong>UI/UX Core Team</strong> to redesign Power BI dashboards — creating modern templates, unified color standards, and enhanced navigation for improved usability.</p>
+        <p>This initiative simplified layouts, standardized design language, and improved accessibility and aesthetics across projects.</p>
 
-          <article>
-            <header><h2><a href="https://arshapradeep5.github.io/PowerBI-Sales-Dashboard/">Sales & Inventory Analytics Report</a></h2></header>
-            <a href="https://arshapradeep5.github.io/PowerBI-Sales-Dashboard/" class="image fit"><img src="images/Sales Overview.png" alt="Sales Dashboard" /></a>
-            <p>Comprehensive Power BI report integrating sales, inventory, and purchase data with KPI cards and trend analytics.</p>
-            <ul class="actions special">
-              <li><a href="https://arshapradeep5.github.io/PowerBI-Sales-Dashboard/" class="button">Project Details</a></li>
-            </ul>
-          </article>
+        <div class="comparison">
+          <img src="images/uiux1.jpg" alt="Before Enhancement">
+          <img src="images/uiux2.jpg" alt="After Enhancement">
+        </div>
+        <p class="caption">Before and After: Transformation showcasing visual alignment, modern colors, and consistent design standards.</p>
+      </section>
 
-          <article>
-            <header><h2><a href="#">SpendSense - Expense Tracker App</a></h2></header>
-            <p>Mobile-friendly Power BI dashboard to track and manage personal finances. Includes expense categorization and savings insights.</p>
-            <ul class="actions special">
-              <li><a href="#" class="button">Project Details</a></li>
-            </ul>
-          </article>
-        </section>
+      <!-- Skills -->
+      <section id="skills">
+        <h2>Skills & Expertise</h2>
+        <h3>BI & Analytics Skillset</h3>
+        <canvas id="technicalSkillsChart"></canvas>
+        <h3>Soft Skills</h3>
+        <canvas id="softSkillsChart"></canvas>
+      </section>
 
-        <!-- UI/UX Section -->
-        <section id="uiux" class="fade-in">
-          <header class="major">
-            <h1>UI/UX Enhancements – Core Design Initiative</h1>
-            <p>Leadership Highlight: Elevating Power BI Dashboard Usability & Visual Standards</p>
-          </header>
-
-          <p>
-            I led the UI/UX Core Team to design modern templates and enhance the visual experience of our Power BI dashboards.
-            We redefined layouts, improved navigation flow, and applied consistent color standards to deliver both beauty and clarity.
-          </p>
-
-          <p>
-            This initiative transformed dashboards into cohesive, engaging experiences — improving stakeholder adoption,
-            readability, and overall design maturity across analytics platforms.
-          </p>
-
-          <div class="comparison">
-            <img src="images/uiux1.jpg" alt="Before Enhancement" />
-            <img src="images/uiux2.jpg" alt="After Enhancement" />
-          </div>
-          <p class="caption">Before and After: Transformation of dashboards through design standardization and enhanced UX principles.</p>
-        </section>
-
-        <!-- Skills -->
-        <section id="skills" class="fade-in">
-          <h2>Skills & Expertise</h2>
-          <h3>BI & Analytics Skillset</h3>
-          <canvas id="technicalSkillsChart"></canvas>
-          <h3>Soft Skills</h3>
-          <canvas id="softSkillsChart"></canvas>
-        </section>
-
-        <!-- Contact -->
-        <section id="contact" class="fade-in">
-          <h2>Let's Connect</h2>
-          <p><strong>📍 Location:</strong> Hyderabad, India</p>
-          <p><strong>📞 Phone:</strong> <a href="tel:+919072275483">+91 9072275483</a></p>
-          <p><strong>📧 Email:</strong> <a href="mailto:arshapradeep0306@gmail.com">arshapradeep0306@gmail.com</a></p>
-        </section>
-      </div>
-
-      <footer>
-        <p>&copy; 2025 Arsha Pradeep | Designed with ❤️ using HTML5 UP</p>
-      </footer>
+      <!-- Contact -->
+      <section id="contact">
+        <h2>Let's Connect</h2>
+        <p><strong>📍 Location:</strong> Hyderabad, India</p>
+        <p><strong>📞 Phone:</strong> <a href="tel:+919072275483">+91 9072275483</a></p>
+        <p><strong>📧 Email:</strong> <a href="mailto:arshapradeep0306@gmail.com">arshapradeep0306@gmail.com</a></p>
+      </section>
     </div>
+
+    <footer>
+      <p>&copy; 2025 Arsha Pradeep | Built with ❤️ by Arsha</p>
+    </footer>
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>
@@ -326,15 +363,16 @@
     <script src="assets/js/main.js"></script>
 
     <script>
+      // Radar Charts
       new Chart(document.getElementById('technicalSkillsChart'), {
         type: 'radar',
         data: {
-          labels: ['Power BI','Spotfire','Tableau','Excel','SQL','Python','ADF','Data Modeling','ETL','DAX','Visualization','Azure'],
+          labels: ['Power BI','Spotfire','Tableau','Excel','SQL','Python','ADF','Modeling','ETL','DAX','Visualization','Azure'],
           datasets: [{
             data: [95,95,85,85,95,75,75,95,95,90,95,70],
-            backgroundColor: 'rgba(0, 123, 255, 0.2)',
-            borderColor: 'rgba(0, 123, 255, 1)',
-            pointBackgroundColor: 'rgba(0, 123, 255, 1)'
+            backgroundColor: 'rgba(138,43,226,0.2)',
+            borderColor: '#8a2be2',
+            pointBackgroundColor: '#8a2be2'
           }]
         },
         options: {plugins:{legend:{display:false}},scales:{r:{suggestedMin:50,suggestedMax:100}}}
@@ -346,26 +384,13 @@
           labels: ['Communication','Storytelling','Problem Solving','Collaboration','Thinking','Adaptability'],
           datasets: [{
             data: [90,90,90,85,87,83],
-            backgroundColor: 'rgba(40,167,69,0.2)',
-            borderColor: 'rgba(40,167,69,1)',
-            pointBackgroundColor: 'rgba(40,167,69,1)'
+            backgroundColor: 'rgba(255,105,180,0.2)',
+            borderColor: '#ff69b4',
+            pointBackgroundColor: '#ff69b4'
           }]
         },
         options: {plugins:{legend:{display:false}},scales:{r:{suggestedMin:50,suggestedMax:100}}}
       });
-
-      function revealOnScroll() {
-        document.querySelectorAll('.fade-in').forEach(el => {
-          if (el.getBoundingClientRect().top < window.innerHeight - 100) el.classList.add('visible');
-        });
-
-        document.querySelectorAll('#uiux img').forEach(img => {
-          if (img.getBoundingClientRect().top < window.innerHeight - 100) img.classList.add('visible');
-        });
-      }
-      window.addEventListener('scroll', revealOnScroll);
-      revealOnScroll();
     </script>
   </body>
 </html>
-
