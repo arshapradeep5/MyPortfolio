@@ -16,26 +16,39 @@
             object-fit: cover;
         }
 
-        #uiux-highlight {
-            background: #0f1115;
-            color: #fff;
-            padding: 4em 2em;
-            border-radius: 20px;
-            box-shadow: 0 0 25px rgba(0, 188, 212, 0.2);
-            margin: 4em 0;
+        h3 {
+            text-align: left;
+            margin-top: 20px;
+            color: #00b4d8;
         }
 
-        #uiux-highlight h1 {
-            color: #00bcd4;
-            font-size: 2.5em;
+        .skills {
+            width: 70%;
+            margin: auto;
+            text-align: center;
         }
 
-        #uiux-highlight h3 {
-            color: #00bcd4;
+        .skill {
+            text-align: left;
+            margin: 10px 0;
         }
 
-        #uiux-highlight p {
-            color: #ddd;
+        .skill p {
+            font-weight: bold;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .progress {
+            height: 100%;
+            background: #00b4d8;
+            transition: width 1s ease-in-out;
         }
     </style>
 </head>
@@ -52,6 +65,7 @@
             <h2>Senior BI Developer</h2>
             <p>I’m a BI Developer with 5 years of experience turning raw, messy data into clear, impactful stories. I work with Power BI, Tableau, and TIBCO Spotfire and SQL to create dashboards that don’t just look good—they help people make smarter decisions.</p>
             <p><em>Data doesn’t lie—if you know how to listen. I make sure it speaks clearly.</em></p>
+
             <ul class="actions">
                 <li><a href="#main" class="button icon solid solo fa-arrow-down scrolly">Explore</a></li>
             </ul>
@@ -67,9 +81,162 @@
             <ul class="links">
                 <li class="active"><a href="#intro">About</a></li>
                 <li><a href="#main">Projects</a></li>
-                <li><a href="#uiux-highlight">UI/UX Enhancements</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#footer">Contact</a></li>
             </ul>
             <ul class="icons">
-                <li><a href="https://www.linkedin.com/in/arsha-pradeep-943914188/" class="icon
+                <li><a href="https://www.linkedin.com/in/arsha-pradeep-943914188/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/arshapradeep5" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+            <center><h1>What I've Built</h1></center>
+
+            <!-- Projects -->
+            <section class="posts">
+
+                <article>
+                    <header>
+                        <h2><a href="https://arshapradeep5.github.io/SpyFi-Financial-Fraud-Intelligence-Dashboard/">SpyFi - Financial Fraud Intelligence Dashboard</a></h2>
+                    </header>
+                    <a href="https://arshapradeep5.github.io/SpyFi-Financial-Fraud-Intelligence-Dashboard/" class="image fit"><img src="images/SpyFi.jpg" alt="SpyFi Dashboard" /></a>
+                    <p>SpyFi is an end-to-end Fraud Detection and Financial Intelligence dashboard built in Power BI, designed to monitor transaction behavior, identify suspicious activities, and assist decision-makers in mitigating financial risk.</p>
+                    <ul class="actions special">
+                        <li><a href="https://arshapradeep5.github.io/SpyFi-Financial-Fraud-Intelligence-Dashboard/" class="button">Project Details</a></li>
+                    </ul>
+                </article>
+
+                <article>
+                    <header>
+                        <h2><a href="https://github.com/arshapradeep5/Banking-Fraud-Detection-SQL">Banking Fraud Detection - SQL Automation Project</a></h2>
+                    </header>
+                    <a href="https://github.com/arshapradeep5/Banking-Fraud-Detection-SQL" class="image fit"><img src="images/banking.jpg" alt="Banking Fraud Detection" /></a>	
+                    <p>A SQL-based data analytics project that detects suspicious transactions using stored procedures, views, and scheduled automation. Designed to flag fraudulent banking activities and support proactive fraud monitoring. Includes schema design, data modeling, and automation using SQL Server Agent.</p>
+                    <ul class="actions special">
+                        <li><a href="https://github.com/arshapradeep5/Banking-Fraud-Detection-SQL" class="button">Project Details</a></li>
+                    </ul>
+                </article>
+
+                <article>
+                    <header>
+                        <h2><a href="https://arshapradeep5.github.io/Performly_Performance-Dashboard/">Performance Dashboard in Power BI</a></h2>
+                    </header>
+                    <a href="https://arshapradeep5.github.io/Performly_Performance-Dashboard/" class="image fit"><img src="images/Performance.png" alt="Performance Dashboard" /></a>
+                    <p>Designed for business leaders to track KPIs, spot top performers, and identify trends with row-level security. Built using Power BI, DAX, and Power Query.</p>
+                    <ul class="actions special">
+                        <li><a href="https://arshapradeep5.github.io/Performly_Performance-Dashboard/" class="button">Project Details</a></li>
+                    </ul>
+                </article>
+
+                <article>
+                    <header>
+                        <h2><a href="https://arshapradeep5.github.io/PowerBI-Sales-Dashboard/">Sales & Inventory Analytics Report</a></h2>
+                    </header>
+                    <a href="https://arshapradeep5.github.io/PowerBI-Sales-Dashboard/" class="image fit"><img src="images/Sales Overview.png" alt="Sales Report" /></a>
+                    <p>Built a consolidated Power BI report for a retail client. Combined sales, inventory, and purchase data with custom DAX KPIs and conditional formatting.</p>
+                    <ul class="actions special">
+                        <li><a href="https://arshapradeep5.github.io/PowerBI-Sales-Dashboard/" class="button">Project Details</a></li>
+                    </ul>
+                </article>
+
+                <article>
+                    <header>
+                        <h2><a href="#">SpendSense - Expense Tracker App</a></h2>
+                    </header>
+                    <p>A Power BI mobile-friendly dashboard that empowers individuals to track and manage their personal finances with ease. SpendSense delivers clear, interactive insights into income, expenses, and savings, helping users make smarter financial decisions.</p>
+                    <ul class="actions special">
+                        <li><a href="spendsense-details.html" class="button">Project Details</a></li>
+                    </ul>
+                </article>
+            </section>
+
+            <!-- Skills -->
+            <section id="skills">
+                <header class="major">
+                    <h2>Skills & Expertise</h2>
+                </header>
+
+                <h3 style="text-align:center;">BI & Analytics Skillset</h3>
+                <canvas id="technicalSkillsChart" style="max-width: 600px; margin: 0 auto 40px auto;"></canvas>
+
+                <h3 style="text-align:center;">Soft Skills</h3>
+                <canvas id="softSkillsChart" style="max-width: 600px; margin: 0 auto 40px auto;"></canvas>
+
+                <script>
+                    new Chart(document.getElementById('technicalSkillsChart'), {
+                        type: 'radar',
+                        data: {
+                            labels: [
+                                'Power BI','TIBCO Spotfire','Tableau','Excel','SQL',
+                                'Python','Azure Data Factory','Data Modeling',
+                                'ETL & Data Integration','DAX & Power Query','Data Visualization','Azure Data Platform'
+                            ],
+                            datasets: [{
+                                data: [95,95,85,85,95,75,75,95,95,90,95,70],
+                                backgroundColor: 'rgba(0, 123, 255, 0.2)',
+                                borderColor: 'rgba(0, 123, 255, 1)',
+                                pointBackgroundColor: 'rgba(0, 123, 255, 1)'
+                            }]
+                        },
+                        options: {responsive:true,plugins:{legend:{display:false}},scales:{r:{suggestedMin:50,suggestedMax:100,ticks:{stepSize:10}}}}
+                    });
+
+                    new Chart(document.getElementById('softSkillsChart'), {
+                        type: 'radar',
+                        data: {
+                            labels: ['Stakeholder Communication','Data Storytelling','Problem Solving','Team Collaboration','Analytical Thinking','Adaptability'],
+                            datasets: [{
+                                data: [90,90,90,85,87,83],
+                                backgroundColor: 'rgba(40, 167, 69, 0.2)',
+                                borderColor: 'rgba(40, 167, 69, 1)',
+                                pointBackgroundColor: 'rgba(40, 167, 69, 1)'
+                            }]
+                        },
+                        options: {responsive:true,plugins:{legend:{display:false}},scales:{r:{suggestedMin:50,suggestedMax:100,ticks:{stepSize:10}}}}
+                    });
+                </script>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <section class="split contact">
+                <section class="alt">
+                    <h3>Location</h3>
+                    <p>Hyderabad, India</p>
+                </section>
+                <section>
+                    <h3>Phone</h3>
+                    <p><a href="tel:+919072275483">+91 9072275483</a></p>
+                </section>
+                <section>
+                    <h3>Email</h3>
+                    <p><a href="mailto:arshapradeep0306@gmail.com">arshapradeep0306@gmail.com</a></p>
+                </section>
+                <section>
+                    <h3>Social</h3>
+                    <ul class="icons alt">
+                        <li><a href="https://www.linkedin.com/in/arsha-pradeep-943914188/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                        <li><a href="https://github.com/arshapradeep5" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                    </ul>
+                </section>
+            </section>
+        </footer>
+
+        <div id="copyright">
+            <ul><li>&copy; Arsha Pradeep</li></ul>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
