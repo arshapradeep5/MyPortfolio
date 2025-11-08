@@ -47,34 +47,51 @@
         transform: scale(1.05);
       }
 
-      /* New: modern View My Work button styling (small, safe CSS only) */
+      /* Modern "View My Work" button */
       .scroll-btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        padding: 12px 26px;
-        border-radius: 28px;
+        display: inline-block;
+        padding: 14px 34px;
+        border-radius: 40px;
         border: 2px solid #00bcd4;
         color: #00bcd4 !important;
-        background: transparent;
-        font-weight: 700;
-        letter-spacing: 0.6px;
+        font-weight: 600;
+        letter-spacing: 0.8px;
+        font-size: 1.05em;
+        text-transform: uppercase;
         text-decoration: none;
-        box-shadow: none;
+        background: rgba(255,255,255,0.05);
+        backdrop-filter: blur(6px);
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
       }
+
       .scroll-btn:hover {
-        background: #00bcd4;
+        background: linear-gradient(90deg, #00bcd4, #14ffec);
         color: #fff !important;
-        transform: translateY(-3px);
-        box-shadow: 0 8px 20px rgba(0, 188, 212, 0.12);
+        box-shadow: 0 0 20px rgba(0, 188, 212, 0.5);
+        transform: translateY(-2px);
       }
-      .scroll-btn .dot {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, #22f3df, #00bcd4);
-        box-shadow: 0 2px 6px rgba(0, 188, 212, 0.35);
-        display: inline-block;
+
+      .scroll-btn::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 40px;
+        border: 2px solid rgba(0, 188, 212, 0.6);
+        animation: pulse 2.5s infinite ease-in-out;
+      }
+
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); opacity: 0.8; }
+        50% { transform: scale(1.1); opacity: 0.3; }
+      }
+
+      @media screen and (max-width: 768px) {
+        .scroll-btn {
+          padding: 12px 26px;
+          font-size: 1em;
+        }
       }
 
       .posts article {
@@ -220,19 +237,14 @@
 
       <!-- Intro -->
       <div id="intro" class="fade-in">
-        <a href="#" class="image avatar"><img src="images/Arsha.jpg" alt="Arsha Pradeep" /></a><br>
+        <a href="#" class="image avatar"><img src="images/Arsha.jpeg" alt="Arsha Pradeep" /></a><br>
         <h1>Arsha Pradeep</h1>
         <h2>Senior BI Developer</h2>
         <p>I’m a BI Developer with 5 years of experience turning data into impactful insights using Power BI, SQL, Tableau, and TIBCO Spotfire.</p>
         <p><em>Data doesn’t lie—if you know how to listen. I make sure it speaks clearly.</em></p>
-
-        <!-- REPLACED: modern "View My Work" scroll button (keeps scrolly class for existing smooth scroll) -->
         <ul class="actions">
           <li>
-            <a href="#main" class="button scrolly scroll-btn">
-              <span class="dot" aria-hidden="true"></span>
-              <span>View My Work</span>
-            </a>
+            <a href="#main" class="scroll-btn scrolly">View My Work</a>
           </li>
         </ul>
       </div>
@@ -392,16 +404,4 @@
       });
 
       function revealOnScroll() {
-        document.querySelectorAll('.fade-in').forEach(el => {
-          if (el.getBoundingClientRect().top < window.innerHeight - 100) el.classList.add('visible');
-        });
-
-        document.querySelectorAll('#uiux img').forEach(img => {
-          if (img.getBoundingClientRect().top < window.innerHeight - 100) img.classList.add('visible');
-        });
-      }
-      window.addEventListener('scroll', revealOnScroll);
-      revealOnScroll();
-    </script>
-  </body>
-</html>
+       
