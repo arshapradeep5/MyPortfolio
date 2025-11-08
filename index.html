@@ -40,11 +40,6 @@
         box-shadow: 0 0 15px rgba(0, 188, 212, 0.2);
       }
 
-      #uiux:hover {
-        transform: scale(1.01);
-        transition: 0.3s;
-      }
-
       /* Contact Section */
       #contact {
         text-align: center;
@@ -61,7 +56,34 @@
       #contact a { color: #00bcd4; text-decoration: none; }
       #contact a:hover { text-decoration: underline; }
 
-      footer { background: #0f1115; color: #fff; text-align: center; padding: 2em 0; }
+      /* Skills */
+      #skills {
+        text-align: center;
+        padding: 4em 0;
+        background: #f0f8ff;
+        border-radius: 15px;
+        margin: 3em 0;
+      }
+
+      #skills h2 {
+        color: #00bcd4;
+        font-size: 2em;
+        margin-bottom: 1em;
+      }
+
+      #skills canvas {
+        max-width: 600px;
+        margin: 1.5em auto;
+        display: block;
+      }
+
+      footer {
+        background: #0f1115;
+        color: #fff;
+        text-align: center;
+        padding: 2em 0;
+      }
+
       footer a { color: #00bcd4; text-decoration: none; }
       footer a:hover { text-decoration: underline; }
     </style>
@@ -104,11 +126,9 @@
 
       <!-- Main -->
       <div id="main">
-
         <center><h1>What I've Built</h1></center>
 
         <section class="posts">
-          <!-- Projects -->
           <article>
             <header><h2><a href="https://arshapradeep5.github.io/SpyFi-Financial-Fraud-Intelligence-Dashboard/">SpyFi - Financial Fraud Intelligence Dashboard</a></h2></header>
             <a href="https://arshapradeep5.github.io/SpyFi-Financial-Fraud-Intelligence-Dashboard/" class="image fit"><img src="images/SpyFi.jpg" alt="SpyFi Dashboard" /></a>
@@ -135,15 +155,6 @@
               <li><a href="https://arshapradeep5.github.io/Performly_Performance-Dashboard/" class="button">Project Details</a></li>
             </ul>
           </article>
-
-          <article>
-            <header><h2><a href="https://arshapradeep5.github.io/PowerBI-Sales-Dashboard/">Sales & Inventory Analytics Report</a></h2></header>
-            <a href="https://arshapradeep5.github.io/PowerBI-Sales-Dashboard/" class="image fit"><img src="images/Sales Overview.png" alt="Sales Report" /></a>
-            <p>Comprehensive Power BI report for sales, purchase, and inventory analytics, featuring dynamic KPIs and forecasting visuals.</p>
-            <ul class="actions special">
-              <li><a href="https://arshapradeep5.github.io/PowerBI-Sales-Dashboard/" class="button">Project Details</a></li>
-            </ul>
-          </article>
         </section>
 
         <!-- UI/UX Leadership Section -->
@@ -168,18 +179,22 @@
           </ul>
         </section>
 
+        <!-- Skills -->
+        <section id="skills" class="fade-in">
+          <h2>Skills & Expertise</h2>
+          <h3>BI & Analytics Skillset</h3>
+          <canvas id="technicalSkillsChart"></canvas>
+          <h3>Soft Skills</h3>
+          <canvas id="softSkillsChart"></canvas>
+        </section>
+
         <!-- Contact -->
         <section id="contact" class="fade-in">
           <h2>Let's Connect</h2>
           <p><strong>📍 Location:</strong> Hyderabad, India</p>
           <p><strong>📞 Phone:</strong> <a href="tel:+919072275483">+91 9072275483</a></p>
           <p><strong>📧 Email:</strong> <a href="mailto:arshapradeep0306@gmail.com">arshapradeep0306@gmail.com</a></p>
-          <ul class="icons">
-            <li><a href="https://www.linkedin.com/in/arsha-pradeep-943914188/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-            <li><a href="https://github.com/arshapradeep5" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-          </ul>
         </section>
-
       </div>
 
       <footer>
@@ -196,6 +211,35 @@
     <script src="assets/js/main.js"></script>
 
     <script>
+      // Charts
+      new Chart(document.getElementById('technicalSkillsChart'), {
+        type: 'radar',
+        data: {
+          labels: ['Power BI','Spotfire','Tableau','Excel','SQL','Python','ADF','Data Modeling','ETL','DAX','Visualization','Azure'],
+          datasets: [{
+            data: [95,95,85,85,95,75,75,95,95,90,95,70],
+            backgroundColor: 'rgba(0, 123, 255, 0.2)',
+            borderColor: 'rgba(0, 123, 255, 1)',
+            pointBackgroundColor: 'rgba(0, 123, 255, 1)'
+          }]
+        },
+        options: {plugins:{legend:{display:false}},scales:{r:{suggestedMin:50,suggestedMax:100}}}
+      });
+      new Chart(document.getElementById('softSkillsChart'), {
+        type: 'radar',
+        data: {
+          labels: ['Communication','Storytelling','Problem Solving','Collaboration','Thinking','Adaptability'],
+          datasets: [{
+            data: [90,90,90,85,87,83],
+            backgroundColor: 'rgba(40,167,69,0.2)',
+            borderColor: 'rgba(40,167,69,1)',
+            pointBackgroundColor: 'rgba(40,167,69,1)'
+          }]
+        },
+        options: {plugins:{legend:{display:false}},scales:{r:{suggestedMin:50,suggestedMax:100}}}
+      });
+
+      // Scroll Animation
       function revealOnScroll() {
         var reveals = document.querySelectorAll('.fade-in');
         for (var i = 0; i < reveals.length; i++) {
