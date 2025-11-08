@@ -47,6 +47,36 @@
         transform: scale(1.05);
       }
 
+      /* New: modern View My Work button styling (small, safe CSS only) */
+      .scroll-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 26px;
+        border-radius: 28px;
+        border: 2px solid #00bcd4;
+        color: #00bcd4 !important;
+        background: transparent;
+        font-weight: 700;
+        letter-spacing: 0.6px;
+        text-decoration: none;
+        box-shadow: none;
+      }
+      .scroll-btn:hover {
+        background: #00bcd4;
+        color: #fff !important;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0, 188, 212, 0.12);
+      }
+      .scroll-btn .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #22f3df, #00bcd4);
+        box-shadow: 0 2px 6px rgba(0, 188, 212, 0.35);
+        display: inline-block;
+      }
+
       .posts article {
         transition: transform 0.4s ease, box-shadow 0.4s ease;
       }
@@ -182,46 +212,6 @@
       @media screen and (max-width: 768px) {
         #uiux img { width: 100%; max-width: 350px; }
       }
-
-      /* New Scroll Button */
-      .scroll-indicator {
-        margin-top: 2em;
-        text-align: center;
-        animation: fadeInUp 1.5s ease-in-out;
-      }
-
-      .scroll-link {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 12px 24px;
-        border-radius: 30px;
-        border: 2px solid #00bcd4;
-        color: #00bcd4;
-        font-weight: 600;
-        letter-spacing: 0.5px;
-        text-decoration: none;
-        transition: all 0.4s ease;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .scroll-link:hover {
-        background: #00bcd4;
-        color: #fff;
-        box-shadow: 0 0 15px rgba(0, 188, 212, 0.4);
-        transform: translateY(-3px);
-      }
-
-      .scroll-icon {
-        font-size: 1.2em;
-        animation: bounce 1.5s infinite ease-in-out;
-      }
-
-      @keyframes bounce {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(5px); }
-      }
     </style>
   </head>
 
@@ -236,13 +226,15 @@
         <p>I’m a BI Developer with 5 years of experience turning data into impactful insights using Power BI, SQL, Tableau, and TIBCO Spotfire.</p>
         <p><em>Data doesn’t lie—if you know how to listen. I make sure it speaks clearly.</em></p>
 
-        <!-- New Scroll Button -->
-        <div class="scroll-indicator fade-in">
-          <a href="#main" class="scroll-link scrolly">
-            <span>View My Work</span>
-            <span class="scroll-icon">▼</span>
-          </a>
-        </div>
+        <!-- REPLACED: modern "View My Work" scroll button (keeps scrolly class for existing smooth scroll) -->
+        <ul class="actions">
+          <li>
+            <a href="#main" class="button scrolly scroll-btn">
+              <span class="dot" aria-hidden="true"></span>
+              <span>View My Work</span>
+            </a>
+          </li>
+        </ul>
       </div>
 
       <!-- Header -->
@@ -269,7 +261,6 @@
       <div id="main">
         <center><h1>What I've Built</h1></center>
 
-        <!-- Projects Section -->
         <section class="posts">
           <article>
             <header><h2><a href="https://arshapradeep5.github.io/SpyFi-Financial-Fraud-Intelligence-Dashboard/">SpyFi - Financial Fraud Intelligence Dashboard</a></h2></header>
@@ -306,6 +297,14 @@
               <li><a href="https://arshapradeep5.github.io/PowerBI-Sales-Dashboard/" class="button">Project Details</a></li>
             </ul>
           </article>
+
+          <article>
+            <header><h2><a href="#">SpendSense - Expense Tracker App</a></h2></header>
+            <p>Mobile-friendly Power BI dashboard to track and manage personal finances. Includes expense categorization and savings insights.</p>
+            <ul class="actions special">
+              <li><a href="#" class="button">Project Details</a></li>
+            </ul>
+          </article>
         </section>
 
         <!-- UI/UX Section -->
@@ -315,7 +314,15 @@
             <p>Leadership Highlight: Elevating Power BI Dashboard Usability & Visual Standards</p>
           </header>
 
-          <p>I led the UI/UX Core Team to design modern templates and enhance the visual experience of our Power BI dashboards.</p>
+          <p>
+            I led the UI/UX Core Team to design modern templates and enhance the visual experience of our Power BI dashboards.
+            We redefined layouts, improved navigation flow, and applied consistent color standards to deliver both beauty and clarity.
+          </p>
+
+          <p>
+            This initiative transformed dashboards into cohesive, engaging experiences — improving stakeholder adoption,
+            readability, and overall design maturity across analytics platforms.
+          </p>
 
           <div class="comparison">
             <img src="images/uiux1.jpg" alt="Before Enhancement" />
@@ -343,20 +350,54 @@
       </div>
 
       <footer>
-        <p>&copy; 2025 Arsha Pradeep | Designed for BI Storytelling</p>
+        <p>&copy; 2025 Arsha Pradeep | Designed with ❤️ using HTML5 UP</p>
       </footer>
     </div>
 
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
     <script>
-      // Reveal animation
+      new Chart(document.getElementById('technicalSkillsChart'), {
+        type: 'radar',
+        data: {
+          labels: ['Power BI','Spotfire','Tableau','Excel','SQL','Python','ADF','Data Modeling','ETL','DAX','Visualization','Azure'],
+          datasets: [{
+            data: [95,95,85,85,95,75,75,95,95,90,95,70],
+            backgroundColor: 'rgba(0, 123, 255, 0.2)',
+            borderColor: 'rgba(0, 123, 255, 1)',
+            pointBackgroundColor: 'rgba(0, 123, 255, 1)'
+          }]
+        },
+        options: {plugins:{legend:{display:false}},scales:{r:{suggestedMin:50,suggestedMax:100}}}
+      });
+
+      new Chart(document.getElementById('softSkillsChart'), {
+        type: 'radar',
+        data: {
+          labels: ['Communication','Storytelling','Problem Solving','Collaboration','Thinking','Adaptability'],
+          datasets: [{
+            data: [90,90,90,85,87,83],
+            backgroundColor: 'rgba(40,167,69,0.2)',
+            borderColor: 'rgba(40,167,69,1)',
+            pointBackgroundColor: 'rgba(40,167,69,1)'
+          }]
+        },
+        options: {plugins:{legend:{display:false}},scales:{r:{suggestedMin:50,suggestedMax:100}}}
+      });
+
       function revealOnScroll() {
         document.querySelectorAll('.fade-in').forEach(el => {
-          if (el.getBoundingClientRect().top < window.innerHeight - 100)
-            el.classList.add('visible');
+          if (el.getBoundingClientRect().top < window.innerHeight - 100) el.classList.add('visible');
         });
+
         document.querySelectorAll('#uiux img').forEach(img => {
-          if (img.getBoundingClientRect().top < window.innerHeight - 100)
-            img.classList.add('visible');
+          if (img.getBoundingClientRect().top < window.innerHeight - 100) img.classList.add('visible');
         });
       }
       window.addEventListener('scroll', revealOnScroll);
